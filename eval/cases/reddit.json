@@ -3,5 +3,19 @@
   "title": "Reddit User Agreement",
   "file": "reddit.txt",
   "source": "https://redditinc.com/policies/user-agreement (retrieved 2026-10-13)",
-  "gold": []
+  "labelling_note": "The saved page is long and starts with language menus, so only the first 60,000 characters are analysed and the text is cut inside section 13. Gold is limited to clauses inside that window (sections 2-13). Later sections are not counted as missed.",
+  "gold": [
+    { "category": "data_sharing", "anchor": "you consent to the collection and use of this information as set forth in the Privacy Policy" },
+    { "category": "unilateral_change", "anchor": "We reserve the right to modify, suspend, or discontinue the Services (in whole or in part) at any time, with or without notice to you" },
+    { "category": "liability_limit", "anchor": "we will not be liable to you or to any third party for any modification, suspension, or discontinuation of the Services" },
+    { "category": "content_license", "anchor": "worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license" },
+    { "category": "content_license", "anchor": "this license includes the right to use Your Content to train AI and machine learning models" },
+    { "category": "data_sharing", "anchor": "make Your Content available for syndication, broadcast, distribution, or publication by other companies, organizations, or individuals who partner with Reddit" },
+    { "category": "content_license", "anchor": "Reddit may use such ideas, suggestions, and feedback without compensation or obligation to you" },
+    { "category": "other", "anchor": "we may, in our sole discretion, delete, deem your content ineligible for monetization, or remove Your Content, at any time and for any reason" },
+    { "category": "data_sharing", "anchor": "we may place advertisements in connection with the display of any Content or information on the Services, including Your Content" },
+    { "category": "other", "anchor": "you agree to defend, indemnify, and hold Reddit, its affiliates" },
+    { "category": "liability_limit", "anchor": "THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF ANY KIND" },
+    { "category": "liability_limit", "anchor": "IN NO EVENT WILL ANY OF THE REDDIT ENTITIES BE LIABLE TO YOU FOR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES" }
+  ]
 }
