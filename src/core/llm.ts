@@ -10,6 +10,7 @@ export async function analyse(sourceText: string, cfg: LlmConfig, fetchImpl: typ
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent`;
   const res = await fetchImpl(url, {
     method: "POST",
+    signal: AbortSignal.timeout(90_000),
     headers: { "Content-Type": "application/json", "x-goog-api-key": cfg.apiKey },
     body: JSON.stringify({
       systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] },

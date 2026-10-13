@@ -26,8 +26,8 @@ async function analyseWithRetry(text: string) {
     try {
       return await analyse(text, { apiKey, model });
     } catch (e) {
-      if (attempt >= 3) throw e;
-      await sleep(4000 * attempt);
+      if (attempt >= 5) throw e;
+      await sleep(8000 * attempt);
     }
   }
 }
