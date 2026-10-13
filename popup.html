@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <title>Contract Trap Spotter</title>
+  <link rel="stylesheet" href="src/popup/popup.css" />
+</head>
+<body>
+  <header>
+    <h1>Contract Trap Spotter</h1>
+    <p class="disclaimer" id="disclaimer">Bu araç hukuki tavsiye vermez. Otomatik bir ön tarama sonucudur.</p>
+  </header>
+  <button id="analyse" type="button">Bu sayfayı analiz et</button>
+  <p id="status" role="status"></p>
+  <section id="report" hidden>
+    <div id="score" class="score"></div>
+    <ul id="warnings" class="warnings"></ul>
+    <ul id="findings"></ul>
+    <details id="rejected-box" hidden>
+      <summary>Doğrulanamayan iddialar</summary>
+      <p class="muted">Model bu maddeleri öne sürdü ama alıntıları sayfa metninde bulunamadı veya güvenilir değildi. Skora dahil edilmedi.</p>
+      <ul id="rejected"></ul>
+    </details>
+  </section>
+  <a href="#" id="open-options">Ayarlar</a>
+  <script type="module" src="src/popup/popup.ts"></script>
+</body>
+</html>

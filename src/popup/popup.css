@@ -1,0 +1,14 @@
+body { width: 380px; margin: 0; padding: 12px; font: 13px/1.4 system-ui, sans-serif; color: #1b1b1f; }
+h1 { font-size: 15px; margin: 0 0 4px; }
+.disclaimer { margin: 0 0 10px; padding: 6px 8px; background: #fff4d6; border-radius: 4px; font-size: 12px; }
+button { width: 100%; padding: 8px; font-size: 13px; cursor: pointer; }
+#status { min-height: 18px; color: #555; }
+.score { font-size: 16px; font-weight: 600; margin: 8px 0; }
+.score.low { color: #1b7f3a; } .score.medium { color: #b26a00; } .score.high { color: #b3261e; }
+ul { padding: 0; list-style: none; margin: 0; }
+li.finding { border: 1px solid #ddd; border-radius: 6px; padding: 8px; margin-bottom: 8px; }
+li.finding .tag { font-size: 11px; font-weight: 600; text-transform: uppercase; }
+blockquote { margin: 6px 0; padding-left: 8px; border-left: 3px solid #bbb; color: #444; font-size: 12px; }
+.warnings li { background: #fde7e9; padding: 6px 8px; border-radius: 4px; margin-bottom: 6px; font-size: 12px; }
+.muted { color: #666; font-size: 12px; }
+a { font-size: 12px; }
