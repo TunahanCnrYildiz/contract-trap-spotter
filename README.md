@@ -54,6 +54,7 @@ Geliştirme komutları:
 | `npm run eval -- --repeat=3` | 5 sözleşme üzerinde eval, her belge 3 kez |
 | `npx tsx eval/run.ts --check` | LLM çağırmadan sadece etiketlerin geçerliliğini denetler |
 | `npm run injection` | Prompt injection testi |
+| `npm run demo` | Demo sayfalarını `http://localhost:8788` adresinde sunar (uzantıyı elle denemek için) |
 | `npm run cy:run` | Cypress e2e demo (aşağıya bakın) |
 
 Eval ve injection testi için proje köküne `.env` dosyası gerekir (`.env.example`'a bakın).

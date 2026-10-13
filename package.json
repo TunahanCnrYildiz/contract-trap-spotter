@@ -11,6 +11,7 @@
     "test": "vitest run",
     "eval": "tsx --env-file=.env eval/run.ts",
     "injection": "tsx --env-file=.env eval/injection.ts",
+    "demo": "node scripts/serve-demo.mjs",
     "cy:run": "npm run build:e2e && cypress run --headed --browser .browsers/chrome/win64-155.0.8059.39/chrome-win64/chrome.exe"
   },
   "dependencies": {
