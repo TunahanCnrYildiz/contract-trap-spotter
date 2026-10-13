@@ -53,6 +53,7 @@ Geliştirme komutları:
 | `npm test` | Birim testleri (49 test) |
 | `npm run eval -- --repeat=3` | 5 sözleşme üzerinde eval, her belge 3 kez |
 | `npx tsx eval/run.ts --check` | LLM çağırmadan sadece etiketlerin geçerliliğini denetler |
+| `npx tsx eval/report-tr.ts` | Son eval çıktısından `docs/eval-sonuclari.md` okunur raporunu üretir |
 | `npm run injection` | Prompt injection testi |
 | `npm run demo` | Demo sayfalarını `http://localhost:8788` adresinde sunar (uzantıyı elle denemek için) |
 | `npm run cy:run` | Cypress e2e demo (aşağıya bakın) |
@@ -164,7 +165,7 @@ Okuma: Model dört saldırının hiçbirine uymadı; tam hatta sonuç temiz sayf
 | Spotify | 20 | 8 | 12 | 1 | 77 |
 | **Toplam** | **77** | **37** | **40** | **6** | |
 
-**Recall %48, precision %86.** Üç koşunun üçü de birebir aynı çıktı verdi (sıcaklık 0 ile bu model bu belgelerde tutarlı). Tam madde listesi: [eval/results.md](eval/results.md). Aşağıdaki tablo ve yüzdeler yalnızca bu beş gerçek belgeyi kapsar; kontrol belgesi ayrıca raporlanır.
+**Recall %48, precision %86.** Üç koşunun üçü de birebir aynı çıktı verdi (sıcaklık 0 ile bu model bu belgelerde tutarlı). Her belge için yakalanan, kaçırılan ve yanlış alarm veren maddelerin okunur, kesilmemiş listesi: [docs/eval-sonuclari.md](docs/eval-sonuclari.md); ham çıktı: [eval/results.md](eval/results.md). Aşağıdaki tablo ve yüzdeler yalnızca bu beş gerçek belgeyi kapsar; kontrol belgesi ayrıca raporlanır.
 
 ### Kontrol belgesi: adil bir sözleşmede ne oluyor?
 
