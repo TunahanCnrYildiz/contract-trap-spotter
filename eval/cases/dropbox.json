@@ -3,5 +3,19 @@
   "title": "Dropbox Terms of Service",
   "file": "dropbox.txt",
   "source": "https://www.dropbox.com/terms (retrieved 2026-10-13)",
-  "gold": []
+  "labelling_note": "Same rule as Netflix: clauses with advance notice (fee changes, term updates) are low risk but included in gold. Standard assignment, governing-law and opt-out clauses are left out.",
+  "gold": [
+    { "category": "data_sharing", "anchor": "this permission extends to our affiliates and trusted third parties we work with" },
+    { "category": "auto_renewal", "anchor": "We'll automatically bill you from the date you convert to a Paid Account and on each periodic renewal until cancellation" },
+    { "category": "cancellation_difficulty", "anchor": "Refunds are only issued if required by law." },
+    { "category": "unilateral_change", "anchor": "We may change the fees in effect on renewal of your subscription" },
+    { "category": "unilateral_change", "anchor": "these free features may be withdrawn without further notice" },
+    { "category": "data_retention", "anchor": "you don't have a Paid Account and haven't accessed our Services for 12 consecutive months" },
+    { "category": "other", "anchor": "We won't provide notice or an opportunity to export Your Stuff before termination or suspension of access to the Services" },
+    { "category": "liability_limit", "anchor": "THE SERVICES ARE PROVIDED \"AS IS" },
+    { "category": "liability_limit", "anchor": "WE LIMIT OUR LIABILITY TO YOU TO THE GREATER OF $20 USD OR 100% OF ANY AMOUNT YOU'VE PAID" },
+    { "category": "arbitration_waiver", "anchor": "final and binding individual arbitration by a single arbitrator" },
+    { "category": "arbitration_waiver", "anchor": "You may only resolve disputes with us on an individual basis, and may not bring a claim as a plaintiff or a class member" },
+    { "category": "unilateral_change", "anchor": "By continuing to use or access the Services after the updates come into effect, you agree to be bound by the revised Terms." }
+  ]
 }

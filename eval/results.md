@@ -4,25 +4,27 @@ Model: `gemini-3.8-flash` · cases: 1 · run: 2026-10-13
 
 | Document | Gold | Caught | Missed | False alarms | Rejected by verifier | Score |
 |---|---|---|---|---|---|---|
-| Netflix Terms of Use | 10 | 6 | 4 | 1 | 0 | 100 |
-| **Total** | 10 | 6 | 4 | 1 | 0 | |
+| Dropbox Terms of Service | 12 | 4 | 8 | 1 | 0 | 100 |
+| **Total** | 12 | 4 | 8 | 1 | 0 | |
 
-Recall: 60% · Precision: 83%
+Recall: 33% · Precision: 80%
 
 "False alarm" means a verified finding that matches no gold label. It may be a real risk the labeller did not mark, so read each one before calling it wrong.
 
-### Netflix Terms of Use
+### Dropbox Terms of Service
 
-Source: https://help.netflix.com/legal/termsofuse (retrieved 2026-10-13)
+Source: https://www.dropbox.com/terms (retrieved 2026-10-13)
 
-- caught: [auto_renewal] Unless you cancel your subscription before your billing date, you authorize us to charge t
-- caught: [other] You authorize us to charge any Payment Method associated with your account in case your pr
-- caught: [cancellation_difficulty] payments are non-refundable and we do not provide refunds or credits for any partial subsc
-- caught: [liability_limit] You waive all special, indirect and consequential damages against us.
-- caught: [liability_limit] is provided "as is" and without warranty or condition
-- caught: [arbitration_waiver] EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT A
-- MISSED: [unilateral_change] We may change our subscription plans and the price of our service from time to time.
-- MISSED: [unilateral_change] We may, from time to time, change these Terms of Use.
-- MISSED: [content_license] worldwide and in perpetuity without further compensation
-- MISSED: [other] using a remote access support tool through which we have full access to your computer
-- FALSE ALARM: [unilateral_change] We may assign or transfer our agreement with you including our associated rights and oblig
+- caught: [auto_renewal] We'll automatically bill you from the date you convert to a Paid Account and on each perio
+- caught: [liability_limit] WE LIMIT OUR LIABILITY TO YOU TO THE GREATER OF $20 USD OR 100% OF ANY AMOUNT YOU'VE PAID
+- caught: [arbitration_waiver] final and binding individual arbitration by a single arbitrator
+- caught: [arbitration_waiver] You may only resolve disputes with us on an individual basis, and may not bring a claim as
+- MISSED: [data_sharing] this permission extends to our affiliates and trusted third parties we work with
+- MISSED: [cancellation_difficulty] Refunds are only issued if required by law.
+- MISSED: [unilateral_change] We may change the fees in effect on renewal of your subscription
+- MISSED: [unilateral_change] these free features may be withdrawn without further notice
+- MISSED: [data_retention] you don't have a Paid Account and haven't accessed our Services for 12 consecutive months
+- MISSED: [other] We won't provide notice or an opportunity to export Your Stuff before termination or suspe
+- MISSED: [liability_limit] THE SERVICES ARE PROVIDED "AS IS
+- MISSED: [unilateral_change] By continuing to use or access the Services after the updates come into effect, you agree 
+- FALSE ALARM: [other] Once we suspend or terminate your access to the Services, you will not be able to access o
