@@ -6,7 +6,6 @@ dist/
 cypress/videos/
 cypress/screenshots/
 .DS_Store
-.claude/
 !.env.example
 .browsers/
 dist-e2e/

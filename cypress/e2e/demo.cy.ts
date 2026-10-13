@@ -1,3 +1,4 @@
+export {}; // makes this file a module so the helpers below stay local
 // Demo for the recording (under 90 s). Runs the real extension build against two demo pages.
 // The model is a scripted mock (cypress/mock-llm.ts), so this run needs no API key.
 const DEMO = "http://localhost:8789";

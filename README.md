@@ -111,7 +111,7 @@ Tehdit modeli: kötü niyetli bir sayfa, modeli yanıltmaya veya uzantıdan veri
 | Sayfada görünür talimat | Sistem prompt'u belgeyi `<document>` etiketleri arasında "güvenilmeyen veri" olarak işaretler ve talimatlara uymamasını söyler. Belge içindeki `</document>` benzeri ifadeler silinir. Kalıp tarayıcı görünür talimatı yakalarsa kullanıcıya uyarı gösterilir. Talimat olan alıntılar bulgu olarak kabul edilmez. |
 | Modelin uydurması | Alıntı doğrulama (yukarıda). |
 | Modelin skoru değiştirmesi | Skor kodla hesaplanır, modelde alan yoktur. |
-| XSS (model çıktısı veya sayfa metni HTML olarak yorumlanması) | Tüm model çıktısı `textContent` ile yazılır, `innerHTML` kullanılmaz. Panel Shadow DOM içindedir, sayfanın CSS ve JS'i ona dokunamaz. |
+| XSS (model çıktısı veya sayfa metni HTML olarak yorumlanması) | Model çıktısı ve sayfa metni yalnızca `textContent` ile yazılır. `innerHTML` yalnızca panelin sabit iskeletini kurmak için kullanılır (içinde model veya sayfa verisi yok). Panel Shadow DOM içindedir, sayfanın CSS ve JS'i ona dokunamaz. |
 | API anahtarı sızması | Anahtar yalnızca `chrome.storage.local` ve background worker'da. Repoda yok (`.env` git'e girmez). Üretim derlemesinde yalnızca Google adresine istek atılır; test amaçlı yerel sahte sunucu adresi yalnızca ayrı `dist-e2e/` derlemesinde bulunur. |
 | Geniş izinler | `activeTab`, `scripting`, `storage` ve tek bir ana bilgisayar izni. İçerik betiği yalnızca sözleşme benzeri URL kalıplarında yüklenir. |
 
@@ -243,7 +243,7 @@ Cypress ile ilgili teknik notlar:
 
 ## page-agent'ın rolü
 
-Ödev, DOM'u metin olarak okuyan Alibaba'nın [page-agent](https://github.com/alibaba/page-agent) aracını öneriyordu. Bu projede onun alt paketi `@page-agent/page-controller`'ı **yedek metin çıkarıcı** olarak kullanıyorum ([src/content/extract.ts](src/content/extract.ts)): kendi çıkarıcım ana bölgeden en az 500 karakter bulamazsa devreye giriyor. Ana yol kendi çıkarıcım ([src/content/main-text.ts](src/content/main-text.ts)), çünkü page-controller'ın çıktısı arayüz otomasyonu için tasarlanmış (etkileşimli öğelere numara verir, görünüm alanına odaklanır) ve menüleri de içerir. page-agent'ın LLM ajanı kısmı (doğal dil komutlarıyla sayfada işlem yapma) kullanılmıyor, çünkü bu proje sayfada işlem yapmıyor, sadece okuyor. Yedek yol **test edilmedi**: eval betiği yalnızca kendi çıkarıcıyı çalıştırıyor, Cypress demo sayfaları ise zaten ana bölge (main) içeriyor. Yedek yolun gerçek sayfalarda ne sıklıkla devreye girdiğini ve çalışıp çalışmadığını ölçmedim.
+Ödev, DOM'u metin olarak okuyan Alibaba'nın [page-agent](https://github.com/alibaba/page-agent) aracını öneriyordu. Bu projede onun alt paketi `@page-agent/page-controller`'ı **yedek metin çıkarıcı** olarak kullanıyorum ([src/content/extract.ts](src/content/extract.ts)): kendi çıkarıcım ana bölgeden en az 500 karakter bulamazsa devreye giriyor. Ana yol kendi çıkarıcım ([src/content/main-text.ts](src/content/main-text.ts)), çünkü page-controller'ın çıktısı arayüz otomasyonu için tasarlanmış (etkileşimli öğelere numara verir, görünüm alanına odaklanır) ve menüleri de içerir. page-agent'ın LLM ajanı kısmı (doğal dil komutlarıyla sayfada işlem yapma) kullanılmıyor, çünkü bu proje sayfada işlem yapmıyor, sadece okuyor. Yedek yol gerçek Chrome'da Cypress ile test edildi ([cypress/e2e/fallback.cy.ts](cypress/e2e/fallback.cy.ts)): ana çıkarıcı için fazla kısa olan bir sayfada metin page-agent'tan geliyor (modele giden metinde PageController'ın `[0]<a ...>` işaretleri görünüyor) ve alıntı doğrulaması yine çalışıyor. Yedek yolun gerçek sayfalarda ne sıklıkla devreye girdiğini ölçmedim; eval betiği yalnızca kendi çıkarıcıyı çalıştırıyor.
 
 ## Bilinen sınırlamalar
 
@@ -270,4 +270,4 @@ cypress/       e2e demo ve sahte model
 docs/          demo videosu
 ```
 
-Testler: 49 birim testi (Vitest) ve 2 Cypress senaryosu.
+Testler: 49 birim testi (Vitest) ve 3 Cypress testi (2'si demo videosu, 1'i page-agent yedek yolu).

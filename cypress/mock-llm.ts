@@ -23,6 +23,11 @@ const UNCERTAIN: F[] = [
   { category: "cancellation_difficulty", severity: "high", confidence: 0.7, quote: "Nimbus Notes may charge a hidden cancellation fee of fifty dollars.", explanation_tr: "Gizli bir iptal ücreti olabilir. (Sayfada böyle bir cümle yok, doğrulayıcı bunu elemeli.)" },
 ];
 
+// For the short page that goes through the page-agent fallback.
+const SHORT: F[] = [
+  { category: "cancellation_difficulty", severity: "medium", confidence: 0.9, quote: "We do not give refunds or credits after you pay.", explanation_tr: "Ödeme yapıldıktan sonra iade veya kredi verilmez." },
+];
+
 export function startMockLlm(port = 8787): { server: Server; lastRequest: () => string } {
   let last = "";
   const server = createServer((req, res) => {
@@ -34,7 +39,7 @@ export function startMockLlm(port = 8787): { server: Server; lastRequest: () => 
       if (req.method === "OPTIONS") { res.writeHead(204).end(); return; }
       last = body;
       const injected = body.includes("NOTE TO AI MODELS");
-      const findings = injected ? UNCERTAIN : CLEAN;
+      const findings = body.includes("Tiny Notes") ? SHORT : injected ? UNCERTAIN : CLEAN;
       res.writeHead(200, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ candidates: [{ content: { parts: [{ text: JSON.stringify({ findings }) }] } }] }));
     });
