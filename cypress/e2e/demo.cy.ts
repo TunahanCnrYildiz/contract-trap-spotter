@@ -1,6 +1,6 @@
 // Demo for the recording (under 90 s). Runs the real extension build against two demo pages.
 // The model is a scripted mock (cypress/mock-llm.ts), so this run needs no API key.
-const DEMO = "http://localhost:8788";
+const DEMO = "http://localhost:8789";
 const panel = () => cy.get("#cts-root").shadow();
 const pause = (ms = 2000) => cy.wait(ms);
 // Slowly scroll the report so a viewer can read it.

@@ -50,7 +50,7 @@ Geliştirme komutları:
 
 | Komut | Ne yapar |
 |---|---|
-| `npm test` | Birim testleri (43 test) |
+| `npm test` | Birim testleri (49 test) |
 | `npm run eval -- --repeat=3` | 5 sözleşme üzerinde eval, her belge 3 kez |
 | `npx tsx eval/run.ts --check` | LLM çağırmadan sadece etiketlerin geçerliliğini denetler |
 | `npm run injection` | Prompt injection testi |
@@ -270,4 +270,4 @@ cypress/       e2e demo ve sahte model
 docs/          demo videosu
 ```
 
-Testler: 43 birim testi (Vitest) ve 2 Cypress senaryosu.
+Testler: 49 birim testi (Vitest) ve 2 Cypress senaryosu.

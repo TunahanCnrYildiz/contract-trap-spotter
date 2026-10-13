@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { startMockLlm } from "./cypress/mock-llm";
 
-const DEMO_PORT = 8788;
+const DEMO_PORT = 8789;
 
 export default defineConfig({
   video: true,

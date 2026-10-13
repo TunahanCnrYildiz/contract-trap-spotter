@@ -1,4 +1,4 @@
-import { analyse, LlmError } from "../core/llm";
+import { analyseWithRetry, userMessage } from "../core/llm";
 import { prepareSource } from "../core/prompt";
 import { verifyFindings } from "../core/verify";
 import { loadSettings } from "../core/settings";
@@ -33,10 +33,10 @@ async function analysePage(page: unknown): Promise<AnalyseResponse> {
 
   const { text, truncated } = prepareSource(page.text);
   try {
-    const output = await analyse(text, settings);
+    const output = await analyseWithRetry(text, settings);
     return { ok: true, report: verifyFindings(output, text, { truncated, hiddenText: page.hiddenText }), url: page.url, title: page.title };
   } catch (e) {
-    return { ok: false, error: e instanceof LlmError ? e.message : "Beklenmeyen hata" };
+    return { ok: false, error: userMessage(e) };
   }
 }
 
