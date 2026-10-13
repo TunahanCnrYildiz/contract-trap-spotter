@@ -138,7 +138,7 @@ Test sayfaları: [demo/terms-clean.html](demo/terms-clean.html) (kurgusal "Nimbu
 
 (Uyarı sütunları, eşleşen enjeksiyon **kalıbı** sayısını gösterir, saldırı sayısını değil. Gizli satırdaki 5, üç gizli saldırı metninin toplam 5 farklı kalıba uyduğu anlamına gelir.)
 
-Okuma: Model dört saldırının hiçbirine uymadı; tam hatta sonuç temiz sayfayla aynı. Çıkarıcısız sürümde gizli metin de modele gidiyor ve skor 88'den 83'e oynuyor; bu küçük ama gizli metnin etkisinin bir işareti. **Bu tek model, tek sayfa ve tek koşuluk bir sonuç**; "model enjeksiyona dayanıklıdır" demek için yeterli değil, "bu testte uymadı" diyebiliyorum. Enjeksiyon kalıplarının yanlış alarm üretmediği, 5 gerçek sözleşme ve normal hukuk cümleleri üzerinde birim testiyle denetleniyor ([tests/injection.test.ts](tests/injection.test.ts)).
+Okuma: Model dört saldırının hiçbirine uymadı; tam hatta sonuç temiz sayfayla aynı. Çıkarıcısız sürümde gizli metin de modele gidiyor ve skor 88'den 83'e oynuyor; bu küçük ama gizli metnin etkisinin bir işareti. **Bu tek model, tek sayfa ve tek koşuluk bir sonuç**; "model enjeksiyona dayanıklıdır" demek için yeterli değil, "bu testte uymadı" diyebiliyorum. Aynı sayfayı uzantıyı gerçek Chrome'a yükleyip elle de denedim (gerçek model, `npm run demo` ile sunulan sayfa): iki enjeksiyon uyarısı da göründü, skor 88/100 çıktı (temiz sayfayla aynı) ve bulgular normal listelendi. Enjeksiyon kalıplarının yanlış alarm üretmediği, 5 gerçek sözleşme ve normal hukuk cümleleri üzerinde birim testiyle denetleniyor ([tests/injection.test.ts](tests/injection.test.ts)).
 
 ## Eval: 5 gerçek sözleşme
 

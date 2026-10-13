@@ -46,7 +46,7 @@ export function renderReport(root: Root, report: Report): void {
   const warnings = $("warnings");
   warnings.replaceChildren();
   if (report.injectionWarnings.length > 0) {
-    warnings.append(el("li", `Sayfada yapay zekâya yönelik talimat benzeri görünür metin bulundu (${report.injectionWarnings.join(", ")}). Model bunu veri olarak ele alır, ama sonuçlara temkinli yaklaşın.`));
+    warnings.append(el("li", `Sayfada yapay zekâya yönelik talimat benzeri görünür metin bulundu. Model bunu veri olarak ele alır, ama sonuçlara temkinli yaklaşın.`));
   }
   if (report.hiddenInjectionWarnings.length > 0) {
     warnings.append(el("li", "Sayfada kullanıcıya görünmeyen, yapay zekâya yönelik talimat benzeri gizli metin bulundu. Analize dahil edilmedi."));
