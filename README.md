@@ -217,7 +217,7 @@ Son satırda recall'un düşmesinin iki nedeni var: (1) Reddit'in kesilen kısm�
 ### Eval'in sınırları
 
 - **Etiketleyici tek kişi** (ben). Sınır maddelerdeki kararlar tartışmalı olabilir.
-- Belgeler beş büyük ve benzer **tüketici sözleşmesi**. Sonuçlar kurumsal sözleşmelere veya Türkçe metinlere genellenemez; Türkçe belgeler denenmedi.
+- Belgeler beş büyük ve benzer **tüketici sözleşmesi**, hepsi İngilizce. Sonuçlar kurumsal sözleşmelere veya Türkçe metinlere genellenemez. Türkçe kaynak metin eval'e girmedi; yalnızca bir kez elle denendi (aşağıya bakın).
 - Sıcaklık 0 ile bu modelde üç koşu aynı çıktığı için "tekrarlı koşu" burada varyans göstermedi. Bu, modelin başka belgelerde de tutarlı olduğu anlamına gelmez; daha önce `gemini-3.8-flash` ile iki koşu arasında farklı maddeler yakalandığını gözlemledim (`eval/history/`).
 - Recall düşük: **model sözleşmedeki riskli maddelerin yarısından azını buluyor.** Bu bir ön tarama aracıdır, bulamadığı maddeler "risk yok" demek değildir. Arayüz bunu da yazıyor.
 - Kontrol belgesi **tek** ve **sentetik**, ayrıca onu da ben yazdım. Skorun adil bir sözleşmede düşük çıktığını gösteriyor ama bir örnekle bunu genellemek doğru olmaz. Seviye eşikleri (25 / 55) beş gerçek belgeye bakılarak değil, önceden genel mantıkla seçildi.
@@ -247,7 +247,7 @@ Cypress ile ilgili teknik notlar:
 ## Bilinen sınırlamalar
 
 - **Düşük recall (%48):** riskli maddelerin yarısından fazlası bulunamıyor.
-- Yalnızca İngilizce sözleşmelerle denendi. Prompt'un Türkçe açıklama üretmesi çalışıyor, ama Türkçe kaynak metinler eval'e girmedi.
+- Eval yalnızca İngilizce sözleşmelerle yapıldı. Netflix Türkçe sayfasında (`help.netflix.com/legal/termsofuse`, Türkçe arayüzle) uzantıyı elle denedim: Türkçe alıntılarla 65/100 skor ve dört kategoride bulgu üretti, alıntılar doğrulayıcıdan geçti. Bu tek bir elle gözlem; Türkçe için recall veya precision ölçülmedi.
 - Metin 60.000 karaktere kesiliyor; daha uzun sayfalarda arayüz bunu uyarıyla belirtiyor ama kesilen kısım analiz edilmiyor.
 - Aynı sayfada birden fazla dilde veya bölgede sürüm varsa (Reddit'te olduğu gibi), tarayıcıda görünmeyen sekme içerikleri gizli metin sayılıp atılır; görünür olan sekme analiz edilir.
 - Sayfa içi panel yalnızca URL'si sözleşme benzeri olan sayfalarda otomatik çıkar; başka sayfalarda popup kullanılmalı.
