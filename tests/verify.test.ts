@@ -78,3 +78,45 @@ describe("detectInjection", () => {
     expect(detectInjection(SOURCE)).toHaveLength(0);
   });
 });
+
+describe("quotes with ellipsis", () => {
+  const DOC =
+    "You grant us a worldwide, royalty-free, perpetual license to use your content. " +
+    "This includes the right to train AI models and to share it with partners. " +
+    "Unrelated filler. ".repeat(40) +
+    "We may delete your account at any time and for any reason without refund.";
+
+  it("accepts pieces that appear in order and close together", () => {
+    const q = "worldwide, royalty-free, perpetual license ... the right to train AI models";
+    const r = verifyFindings({ findings: [finding(q)] }, DOC);
+    expect(r.findings).toHaveLength(1);
+  });
+
+  it("accepts a leading or trailing ellipsis", () => {
+    const r = verifyFindings({ findings: [finding("...the right to train AI models and to share it...")] }, DOC);
+    expect(r.findings).toHaveLength(1);
+  });
+
+  it("rejects pieces in the wrong order", () => {
+    const q = "the right to train AI models ... worldwide, royalty-free, perpetual license";
+    const r = verifyFindings({ findings: [finding(q)] }, DOC);
+    expect(r.rejected[0]?.reason).toBe("quote_not_found");
+  });
+
+  it("rejects pieces that are far apart in the source", () => {
+    const q = "worldwide, royalty-free, perpetual license ... delete your account at any time and for any reason";
+    const r = verifyFindings({ findings: [finding(q)] }, DOC);
+    expect(r.rejected[0]?.reason).toBe("quote_not_found");
+  });
+
+  it("rejects a quote with an invented piece", () => {
+    const q = "worldwide, royalty-free, perpetual license ... and we may sell it to anyone";
+    const r = verifyFindings({ findings: [finding(q)] }, DOC);
+    expect(r.rejected[0]?.reason).toBe("quote_not_found");
+  });
+
+  it("does not let ellipsis make a tiny quote valid", () => {
+    const r = verifyFindings({ findings: [finding("we may ... at any")] }, DOC);
+    expect(r.rejected[0]?.reason).toBe("quote_too_short");
+  });
+});

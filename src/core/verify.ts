@@ -8,6 +8,7 @@ import {
 } from "./schema";
 import { detectInjection, looksLikeInstruction } from "./injection";
 import { normalizeForMatch } from "./text";
+import { quoteInSource, quoteSegments } from "./quote";
 
 const MIN_QUOTE_LEN = 20;
 
@@ -39,12 +40,13 @@ export function verifyFindings(
   const rejected: RejectedFinding[] = [];
 
   for (const f of output.findings) {
-    const needle = normalizeForMatch(f.quote);
-    if (needle.length < MIN_QUOTE_LEN) {
+    const needle = quoteSegments(f.quote).join(" ... ");
+    const matched = quoteSegments(f.quote).reduce((n, seg) => n + seg.length, 0);
+    if (matched < MIN_QUOTE_LEN) {
       rejected.push({ finding: f, reason: "quote_too_short" });
     } else if (looksLikeInstruction(f.quote)) {
       rejected.push({ finding: f, reason: "quote_is_instruction" });
-    } else if (!haystack.includes(needle)) {
+    } else if (!quoteInSource(haystack, f.quote)) {
       rejected.push({ finding: f, reason: "quote_not_found" });
     } else if (!seen.has(needle)) {
       seen.add(needle);

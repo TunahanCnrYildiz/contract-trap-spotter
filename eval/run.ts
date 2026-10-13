@@ -8,6 +8,7 @@ import { analyse } from "../src/core/llm";
 import { prepareSource } from "../src/core/prompt";
 import { verifyFindings } from "../src/core/verify";
 import { normalizeForMatch } from "../src/core/text";
+import { quoteSegments } from "../src/core/quote";
 
 type Gold = { category: string; anchor: string; note?: string };
 type Case = { id: string; title: string; file: string; source: string; gold: Gold[] };
@@ -34,9 +35,9 @@ async function analyseWithRetry(text: string) {
 
 // A finding matches a gold item when their text spans overlap.
 function overlaps(quote: string, anchor: string): boolean {
-  const q = normalizeForMatch(quote);
   const a = normalizeForMatch(anchor);
-  return q.includes(a) || a.includes(q);
+  // A quote with "..." matches when any of its pieces overlaps the anchor.
+  return quoteSegments(quote).some((q) => q.includes(a) || a.includes(q));
 }
 
 // Optional filter: npm run eval -- netflix reddit
