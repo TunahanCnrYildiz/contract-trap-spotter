@@ -8,7 +8,7 @@
     "dev": "vite build --watch",
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
-    "eval": "tsx eval/run.ts",
+    "eval": "tsx --env-file=.env eval/run.ts",
     "cy:run": "cypress run --browser chrome"
   },
   "dependencies": {
