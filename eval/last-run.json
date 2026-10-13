@@ -1,377 +1,1276 @@
 {
  "model": "gemini-3.1-flash-lite",
- "date": "2026-10-13T14:45:06.578Z",
+ "date": "2026-10-13T15:54:12.494Z",
+ "repeat": 3,
  "cases": [
   {
    "id": "dropbox",
    "truncated": false,
-   "findings": [
+   "runs": [
     {
-     "category": "auto_renewal",
-     "severity": "medium",
-     "quote": "We’ll automatically bill you from the date you convert to a Paid Account and on each periodic renewal until cancellation.",
-     "explanation_tr": "Ücretli abonelikler, siz iptal edene kadar otomatik olarak yenilenir ve kartınızdan çekim yapılır.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "We’ll automatically bill you from the date you convert to a Paid Account and on each periodic renewal until cancellation.",
+       "explanation_tr": "Ücretli abonelikler, siz iptal edene kadar otomatik olarak yenilenir ve kartınızdan çekim yapılır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "Refunds are only issued if required by law.",
+       "explanation_tr": "Yasal bir zorunluluk olmadıkça ücret iadesi yapılmaz; bu da abonelik iptallerinde para iadesi almayı zorlaştırır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "By continuing to use or access the Services after the updates come into effect, you agree to be bound by the revised Terms.",
+       "explanation_tr": "Hizmeti kullanmaya devam etmeniz, şartlarda yapılan değişiklikleri otomatik olarak kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "To provide these and other features, Dropbox accesses, stores, and scans Your Stuff. You give us permission to do those things, and this permission extends to our affiliates and trusted third parties we work with.",
+       "explanation_tr": "Dropbox, özelliklerini sunmak için dosyalarınızı tarama, saklama ve erişme izni alır; bu izin üçüncü tarafları da kapsar.",
+       "confidence": 0.9,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SERVICES ARE PROVIDED \"AS IS.\" WE ALSO DISCLAIM ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulur; şirket, hizmetin kalitesi veya uygunluğu konusunda hiçbir garanti vermez.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "OTHER THAN FOR THE TYPES OF LIABILITY WE CANNOT LIMIT BY LAW (AS DESCRIBED IN THIS SECTION), WE LIMIT OUR LIABILITY TO YOU TO THE GREATER OF $20 USD OR 100% OF ANY AMOUNT YOU'VE PAID UNDER YOUR CURRENT SERVICE PLAN WITH DROPBOX.",
+       "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz tutar veya 20 dolar ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "You and Dropbox agree to resolve any claims relating to or arising out of these Terms or the Services through final and binding individual arbitration by a single arbitrator",
+       "explanation_tr": "Uyuşmazlıkları mahkemeye taşımak yerine zorunlu tahkime gitmeyi kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "You may only resolve disputes with us on an individual basis, and may not bring a claim as a plaintiff or a class member in a class, consolidated, or representative action.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "We reserve the right to suspend or terminate your access to the Services with notice to you if Dropbox reasonably believes: you’re in breach of these Terms, your use of the Services would cause a real risk of harm or loss to us or other users, or you don’t have a Paid Account and haven't accessed our Services for 12 consecutive months.",
+       "explanation_tr": "Dropbox, belirli durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar.",
+       "confidence": 0.9,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 77
     },
     {
-     "category": "cancellation_difficulty",
-     "severity": "medium",
-     "quote": "Refunds are only issued if required by law.",
-     "explanation_tr": "Yasal bir zorunluluk olmadıkça ücret iadesi yapılmaz; bu da abonelik iptallerinde para iadesi almayı zorlaştırır.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "We’ll automatically bill you from the date you convert to a Paid Account and on each periodic renewal until cancellation.",
+       "explanation_tr": "Ücretli abonelikler, siz iptal edene kadar otomatik olarak yenilenir ve kartınızdan çekim yapılır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "Refunds are only issued if required by law.",
+       "explanation_tr": "Yasal bir zorunluluk olmadıkça ücret iadesi yapılmaz; bu da abonelik iptallerinde para iadesi almayı zorlaştırır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "By continuing to use or access the Services after the updates come into effect, you agree to be bound by the revised Terms.",
+       "explanation_tr": "Hizmeti kullanmaya devam etmeniz, şartlarda yapılan değişiklikleri otomatik olarak kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "To provide these and other features, Dropbox accesses, stores, and scans Your Stuff. You give us permission to do those things, and this permission extends to our affiliates and trusted third parties we work with.",
+       "explanation_tr": "Dropbox, özelliklerini sunmak için dosyalarınızı tarama, saklama ve erişme izni alır; bu izin üçüncü tarafları da kapsar.",
+       "confidence": 0.9,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SERVICES ARE PROVIDED \"AS IS.\" WE ALSO DISCLAIM ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulur; şirket, hizmetin kalitesi veya uygunluğu konusunda hiçbir garanti vermez.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "OTHER THAN FOR THE TYPES OF LIABILITY WE CANNOT LIMIT BY LAW (AS DESCRIBED IN THIS SECTION), WE LIMIT OUR LIABILITY TO YOU TO THE GREATER OF $20 USD OR 100% OF ANY AMOUNT YOU'VE PAID UNDER YOUR CURRENT SERVICE PLAN WITH DROPBOX.",
+       "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz tutar veya 20 dolar ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "You and Dropbox agree to resolve any claims relating to or arising out of these Terms or the Services through final and binding individual arbitration by a single arbitrator",
+       "explanation_tr": "Uyuşmazlıkları mahkemeye taşımak yerine zorunlu tahkime gitmeyi kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "You may only resolve disputes with us on an individual basis, and may not bring a claim as a plaintiff or a class member in a class, consolidated, or representative action.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "We reserve the right to suspend or terminate your access to the Services with notice to you if Dropbox reasonably believes: you’re in breach of these Terms, your use of the Services would cause a real risk of harm or loss to us or other users, or you don’t have a Paid Account and haven't accessed our Services for 12 consecutive months.",
+       "explanation_tr": "Dropbox, belirli durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar.",
+       "confidence": 0.9,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 77
     },
     {
-     "category": "unilateral_change",
-     "severity": "medium",
-     "quote": "By continuing to use or access the Services after the updates come into effect, you agree to be bound by the revised Terms.",
-     "explanation_tr": "Hizmeti kullanmaya devam etmeniz, şartlarda yapılan değişiklikleri otomatik olarak kabul ettiğiniz anlamına gelir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "content_license",
-     "severity": "medium",
-     "quote": "To provide these and other features, Dropbox accesses, stores, and scans Your Stuff. You give us permission to do those things, and this permission extends to our affiliates and trusted third parties we work with.",
-     "explanation_tr": "Dropbox, özelliklerini sunmak için dosyalarınızı tarama, saklama ve erişme izni alır; bu izin üçüncü tarafları da kapsar.",
-     "confidence": 0.9,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "THE SERVICES ARE PROVIDED \"AS IS.\" WE ALSO DISCLAIM ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
-     "explanation_tr": "Hizmetler 'olduğu gibi' sunulur; şirket, hizmetin kalitesi veya uygunluğu konusunda hiçbir garanti vermez.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "OTHER THAN FOR THE TYPES OF LIABILITY WE CANNOT LIMIT BY LAW (AS DESCRIBED IN THIS SECTION), WE LIMIT OUR LIABILITY TO YOU TO THE GREATER OF $20 USD OR 100% OF ANY AMOUNT YOU'VE PAID UNDER YOUR CURRENT SERVICE PLAN WITH DROPBOX.",
-     "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz tutar veya 20 dolar ile sınırlandırılmıştır.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "arbitration_waiver",
-     "severity": "high",
-     "quote": "You and Dropbox agree to resolve any claims relating to or arising out of these Terms or the Services through final and binding individual arbitration by a single arbitrator",
-     "explanation_tr": "Uyuşmazlıkları mahkemeye taşımak yerine zorunlu tahkime gitmeyi kabul ediyorsunuz.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "arbitration_waiver",
-     "severity": "high",
-     "quote": "You may only resolve disputes with us on an individual basis, and may not bring a claim as a plaintiff or a class member in a class, consolidated, or representative action.",
-     "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyorsunuz.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "other",
-     "severity": "medium",
-     "quote": "We reserve the right to suspend or terminate your access to the Services with notice to you if Dropbox reasonably believes: you’re in breach of these Terms, your use of the Services would cause a real risk of harm or loss to us or other users, or you don’t have a Paid Account and haven't accessed our Services for 12 consecutive months.",
-     "explanation_tr": "Dropbox, belirli durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar.",
-     "confidence": 0.9,
-     "verified": true
+     "caught": [
+      0,
+      1,
+      2,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "We’ll automatically bill you from the date you convert to a Paid Account and on each periodic renewal until cancellation.",
+       "explanation_tr": "Ücretli abonelikler, siz iptal edene kadar otomatik olarak yenilenir ve kartınızdan çekim yapılır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "Refunds are only issued if required by law.",
+       "explanation_tr": "Yasal bir zorunluluk olmadıkça ücret iadesi yapılmaz; bu da abonelik iptallerinde para iadesi almayı zorlaştırır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "By continuing to use or access the Services after the updates come into effect, you agree to be bound by the revised Terms.",
+       "explanation_tr": "Hizmeti kullanmaya devam etmeniz, şartlarda yapılan değişiklikleri otomatik olarak kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "To provide these and other features, Dropbox accesses, stores, and scans Your Stuff. You give us permission to do those things, and this permission extends to our affiliates and trusted third parties we work with.",
+       "explanation_tr": "Dropbox, özelliklerini sunmak için dosyalarınızı tarama, saklama ve erişme izni alır; bu izin üçüncü tarafları da kapsar.",
+       "confidence": 0.9,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SERVICES ARE PROVIDED \"AS IS.\" WE ALSO DISCLAIM ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulur; şirket, hizmetin kalitesi veya uygunluğu konusunda hiçbir garanti vermez.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "OTHER THAN FOR THE TYPES OF LIABILITY WE CANNOT LIMIT BY LAW (AS DESCRIBED IN THIS SECTION), WE LIMIT OUR LIABILITY TO YOU TO THE GREATER OF $20 USD OR 100% OF ANY AMOUNT YOU'VE PAID UNDER YOUR CURRENT SERVICE PLAN WITH DROPBOX.",
+       "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz tutar veya 20 dolar ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "You and Dropbox agree to resolve any claims relating to or arising out of these Terms or the Services through final and binding individual arbitration by a single arbitrator",
+       "explanation_tr": "Uyuşmazlıkları mahkemeye taşımak yerine zorunlu tahkime gitmeyi kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "You may only resolve disputes with us on an individual basis, and may not bring a claim as a plaintiff or a class member in a class, consolidated, or representative action.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "We reserve the right to suspend or terminate your access to the Services with notice to you if Dropbox reasonably believes: you’re in breach of these Terms, your use of the Services would cause a real risk of harm or loss to us or other users, or you don’t have a Paid Account and haven't accessed our Services for 12 consecutive months.",
+       "explanation_tr": "Dropbox, belirli durumlarda hesabınızı askıya alma veya sonlandırma hakkını saklı tutar.",
+       "confidence": 0.9,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 77
     }
-   ],
-   "rejected": []
+   ]
   },
   {
    "id": "linkedin",
    "truncated": false,
-   "findings": [
+   "runs": [
     {
-     "category": "unilateral_change",
-     "severity": "medium",
-     "quote": "We may modify this Contract, our Privacy Policy and our Cookie Policy from time to time. If we materially change these terms or if we are legally required to provide notice, we will provide you notice through our Services, or by other means, to provide you the opportunity to review the changes before they become effective.",
-     "explanation_tr": "Şirket, sözleşmeyi ve politikalarını dilediği zaman değiştirebilir. Önemli değişikliklerde bildirim yapılacağı belirtilse de, bazı durumlarda önceden bildirim yapılmayabileceği ifade edilmiştir.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      3,
+      4,
+      5,
+      8,
+      14,
+      16
+     ],
+     "findings": [
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may modify this Contract, our Privacy Policy and our Cookie Policy from time to time. If we materially change these terms or if we are legally required to provide notice, we will provide you notice through our Services, or by other means, to provide you the opportunity to review the changes before they become effective.",
+       "explanation_tr": "Şirket, sözleşmeyi ve politikalarını dilediği zaman değiştirebilir. Önemli değişikliklerde bildirim yapılacağı belirtilse de, bazı durumlarda önceden bildirim yapılmayabileceği ifade edilmiştir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "If you purchase a subscription, your payment method automatically will be charged at the start of each subscription period for the fees and taxes applicable to that period. To avoid future charges, cancel before the renewal date.",
+       "explanation_tr": "Abonelikler otomatik olarak yenilenir ve ödeme yönteminizden otomatik olarak çekim yapılır. İptal etmediğiniz sürece ücretlendirme devam eder.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "We may store and continue billing your payment method (e.g., credit card), even after it has expired, to avoid interruptions in your paid Services and to use it to pay for other Services you may buy. If your primary payment method fails, we may automatically charge a secondary payment method, if you have provided one.",
+       "explanation_tr": "Şirket, ödeme bilgilerinizi saklar ve süresi dolmuş olsa bile kartınızdan çekim yapmaya devam edebilir. Ayrıca, birincil ödeme yöntemi başarısız olursa ikincil yöntemi otomatik olarak kullanabilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "A worldwide, transferable and sublicensable right to use, copy, modify, distribute, publicly perform and display, host, and process your content and other information without any further consent, notice and/or compensation to you or others.",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde LinkedIn'e dünya çapında, alt lisanslanabilir ve devredilebilir geniş kapsamlı kullanım hakları veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "LINKEDIN AND ITS AFFILIATES MAKE NO REPRESENTATION OR WARRANTY ABOUT THE SERVICES, INCLUDING ANY REPRESENTATION THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, AND PROVIDE THE SERVICES (INCLUDING CONTENT, OUTPUT AND INFORMATION) ON AN “AS IS” AND “AS AVAILABLE” BASIS.",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; kesintisiz veya hatasız çalışacağına dair hiçbir garanti verilmemektedir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "LINKEDIN AND ITS AFFILIATES WILL NOT BE LIABLE TO YOU IN CONNECTION WITH THIS CONTRACT FOR ANY AMOUNT THAT EXCEEDS (A) THE TOTAL FEES PAID OR PAYABLE BY YOU TO LINKEDIN FOR THE SERVICES DURING THE TERM OF THIS CONTRACT, IF ANY, OR (B) US $1000.",
+       "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz ücretlerle veya 1000 ABD Doları ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "You agree that LinkedIn may assign this Contract to its affiliates or a party that buys it without your consent.",
+       "explanation_tr": "Şirket, bu sözleşmeyi sizin onayınız olmadan başka bir şirkete veya bağlı kuruluşuna devredebilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "data_retention",
+       "severity": "low",
+       "quote": "You agree that we have no obligation to store, maintain or provide you a copy of any content or other information that you or others provide, except to the extent required by applicable law and as noted in our Privacy Policy.",
+       "explanation_tr": "Şirket, paylaştığınız içerikleri saklamak veya size bir kopyasını sunmak zorunda değildir.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 67
     },
     {
-     "category": "auto_renewal",
-     "severity": "medium",
-     "quote": "If you purchase a subscription, your payment method automatically will be charged at the start of each subscription period for the fees and taxes applicable to that period. To avoid future charges, cancel before the renewal date.",
-     "explanation_tr": "Abonelikler otomatik olarak yenilenir ve ödeme yönteminizden otomatik olarak çekim yapılır. İptal etmediğiniz sürece ücretlendirme devam eder.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      3,
+      4,
+      5,
+      8,
+      14,
+      16
+     ],
+     "findings": [
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may modify this Contract, our Privacy Policy and our Cookie Policy from time to time. If we materially change these terms or if we are legally required to provide notice, we will provide you notice through our Services, or by other means, to provide you the opportunity to review the changes before they become effective.",
+       "explanation_tr": "Şirket, sözleşmeyi ve politikalarını dilediği zaman değiştirebilir. Önemli değişikliklerde bildirim yapılacağı belirtilse de, bazı durumlarda önceden bildirim yapılmayabileceği ifade edilmiştir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "If you purchase a subscription, your payment method automatically will be charged at the start of each subscription period for the fees and taxes applicable to that period. To avoid future charges, cancel before the renewal date.",
+       "explanation_tr": "Abonelikler otomatik olarak yenilenir ve ödeme yönteminizden otomatik olarak çekim yapılır. İptal etmediğiniz sürece ücretlendirme devam eder.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "We may store and continue billing your payment method (e.g., credit card), even after it has expired, to avoid interruptions in your paid Services and to use it to pay for other Services you may buy. If your primary payment method fails, we may automatically charge a secondary payment method, if you have provided one.",
+       "explanation_tr": "Şirket, ödeme bilgilerinizi saklar ve süresi dolmuş olsa bile kartınızdan çekim yapmaya devam edebilir. Ayrıca, birincil ödeme yöntemi başarısız olursa ikincil yöntemi otomatik olarak kullanabilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "A worldwide, transferable and sublicensable right to use, copy, modify, distribute, publicly perform and display, host, and process your content and other information without any further consent, notice and/or compensation to you or others.",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde LinkedIn'e dünya çapında, alt lisanslanabilir ve devredilebilir geniş kapsamlı kullanım hakları veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "LINKEDIN AND ITS AFFILIATES MAKE NO REPRESENTATION OR WARRANTY ABOUT THE SERVICES, INCLUDING ANY REPRESENTATION THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, AND PROVIDE THE SERVICES (INCLUDING CONTENT, OUTPUT AND INFORMATION) ON AN “AS IS” AND “AS AVAILABLE” BASIS.",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; kesintisiz veya hatasız çalışacağına dair hiçbir garanti verilmemektedir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "LINKEDIN AND ITS AFFILIATES WILL NOT BE LIABLE TO YOU IN CONNECTION WITH THIS CONTRACT FOR ANY AMOUNT THAT EXCEEDS (A) THE TOTAL FEES PAID OR PAYABLE BY YOU TO LINKEDIN FOR THE SERVICES DURING THE TERM OF THIS CONTRACT, IF ANY, OR (B) US $1000.",
+       "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz ücretlerle veya 1000 ABD Doları ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "You agree that LinkedIn may assign this Contract to its affiliates or a party that buys it without your consent.",
+       "explanation_tr": "Şirket, bu sözleşmeyi sizin onayınız olmadan başka bir şirkete veya bağlı kuruluşuna devredebilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "data_retention",
+       "severity": "low",
+       "quote": "You agree that we have no obligation to store, maintain or provide you a copy of any content or other information that you or others provide, except to the extent required by applicable law and as noted in our Privacy Policy.",
+       "explanation_tr": "Şirket, paylaştığınız içerikleri saklamak veya size bir kopyasını sunmak zorunda değildir.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 67
     },
     {
-     "category": "auto_renewal",
-     "severity": "medium",
-     "quote": "We may store and continue billing your payment method (e.g., credit card), even after it has expired, to avoid interruptions in your paid Services and to use it to pay for other Services you may buy. If your primary payment method fails, we may automatically charge a secondary payment method, if you have provided one.",
-     "explanation_tr": "Şirket, ödeme bilgilerinizi saklar ve süresi dolmuş olsa bile kartınızdan çekim yapmaya devam edebilir. Ayrıca, birincil ödeme yöntemi başarısız olursa ikincil yöntemi otomatik olarak kullanabilir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "content_license",
-     "severity": "high",
-     "quote": "A worldwide, transferable and sublicensable right to use, copy, modify, distribute, publicly perform and display, host, and process your content and other information without any further consent, notice and/or compensation to you or others.",
-     "explanation_tr": "Paylaştığınız içerikler üzerinde LinkedIn'e dünya çapında, alt lisanslanabilir ve devredilebilir geniş kapsamlı kullanım hakları veriyorsunuz.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "LINKEDIN AND ITS AFFILIATES MAKE NO REPRESENTATION OR WARRANTY ABOUT THE SERVICES, INCLUDING ANY REPRESENTATION THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, AND PROVIDE THE SERVICES (INCLUDING CONTENT, OUTPUT AND INFORMATION) ON AN “AS IS” AND “AS AVAILABLE” BASIS.",
-     "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; kesintisiz veya hatasız çalışacağına dair hiçbir garanti verilmemektedir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "LINKEDIN AND ITS AFFILIATES WILL NOT BE LIABLE TO YOU IN CONNECTION WITH THIS CONTRACT FOR ANY AMOUNT THAT EXCEEDS (A) THE TOTAL FEES PAID OR PAYABLE BY YOU TO LINKEDIN FOR THE SERVICES DURING THE TERM OF THIS CONTRACT, IF ANY, OR (B) US $1000.",
-     "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz ücretlerle veya 1000 ABD Doları ile sınırlandırılmıştır.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "other",
-     "severity": "medium",
-     "quote": "You agree that LinkedIn may assign this Contract to its affiliates or a party that buys it without your consent.",
-     "explanation_tr": "Şirket, bu sözleşmeyi sizin onayınız olmadan başka bir şirkete veya bağlı kuruluşuna devredebilir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "data_retention",
-     "severity": "low",
-     "quote": "You agree that we have no obligation to store, maintain or provide you a copy of any content or other information that you or others provide, except to the extent required by applicable law and as noted in our Privacy Policy.",
-     "explanation_tr": "Şirket, paylaştığınız içerikleri saklamak veya size bir kopyasını sunmak zorunda değildir.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      3,
+      4,
+      5,
+      8,
+      14,
+      16
+     ],
+     "findings": [
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may modify this Contract, our Privacy Policy and our Cookie Policy from time to time. If we materially change these terms or if we are legally required to provide notice, we will provide you notice through our Services, or by other means, to provide you the opportunity to review the changes before they become effective.",
+       "explanation_tr": "Şirket, sözleşmeyi ve politikalarını dilediği zaman değiştirebilir. Önemli değişikliklerde bildirim yapılacağı belirtilse de, bazı durumlarda önceden bildirim yapılmayabileceği ifade edilmiştir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "If you purchase a subscription, your payment method automatically will be charged at the start of each subscription period for the fees and taxes applicable to that period. To avoid future charges, cancel before the renewal date.",
+       "explanation_tr": "Abonelikler otomatik olarak yenilenir ve ödeme yönteminizden otomatik olarak çekim yapılır. İptal etmediğiniz sürece ücretlendirme devam eder.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "We may store and continue billing your payment method (e.g., credit card), even after it has expired, to avoid interruptions in your paid Services and to use it to pay for other Services you may buy. If your primary payment method fails, we may automatically charge a secondary payment method, if you have provided one.",
+       "explanation_tr": "Şirket, ödeme bilgilerinizi saklar ve süresi dolmuş olsa bile kartınızdan çekim yapmaya devam edebilir. Ayrıca, birincil ödeme yöntemi başarısız olursa ikincil yöntemi otomatik olarak kullanabilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "A worldwide, transferable and sublicensable right to use, copy, modify, distribute, publicly perform and display, host, and process your content and other information without any further consent, notice and/or compensation to you or others.",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde LinkedIn'e dünya çapında, alt lisanslanabilir ve devredilebilir geniş kapsamlı kullanım hakları veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "LINKEDIN AND ITS AFFILIATES MAKE NO REPRESENTATION OR WARRANTY ABOUT THE SERVICES, INCLUDING ANY REPRESENTATION THAT THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE, AND PROVIDE THE SERVICES (INCLUDING CONTENT, OUTPUT AND INFORMATION) ON AN “AS IS” AND “AS AVAILABLE” BASIS.",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; kesintisiz veya hatasız çalışacağına dair hiçbir garanti verilmemektedir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "LINKEDIN AND ITS AFFILIATES WILL NOT BE LIABLE TO YOU IN CONNECTION WITH THIS CONTRACT FOR ANY AMOUNT THAT EXCEEDS (A) THE TOTAL FEES PAID OR PAYABLE BY YOU TO LINKEDIN FOR THE SERVICES DURING THE TERM OF THIS CONTRACT, IF ANY, OR (B) US $1000.",
+       "explanation_tr": "Şirketin size karşı sorumluluğu, ödediğiniz ücretlerle veya 1000 ABD Doları ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "You agree that LinkedIn may assign this Contract to its affiliates or a party that buys it without your consent.",
+       "explanation_tr": "Şirket, bu sözleşmeyi sizin onayınız olmadan başka bir şirkete veya bağlı kuruluşuna devredebilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "data_retention",
+       "severity": "low",
+       "quote": "You agree that we have no obligation to store, maintain or provide you a copy of any content or other information that you or others provide, except to the extent required by applicable law and as noted in our Privacy Policy.",
+       "explanation_tr": "Şirket, paylaştığınız içerikleri saklamak veya size bir kopyasını sunmak zorunda değildir.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 67
     }
-   ],
-   "rejected": []
+   ]
   },
   {
    "id": "netflix",
    "truncated": false,
-   "findings": [
+   "runs": [
     {
-     "category": "auto_renewal",
-     "severity": "medium",
-     "quote": "Unless you cancel your subscription before your billing date, you authorize us to charge the subscription fee for the next billing cycle to your Payment Method",
-     "explanation_tr": "Aboneliğiniz, siz iptal etmediğiniz sürece otomatik olarak yenilenir ve ödeme yönteminizden ücret tahsil edilir.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      0,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "Unless you cancel your subscription before your billing date, you authorize us to charge the subscription fee for the next billing cycle to your Payment Method",
+       "explanation_tr": "Aboneliğiniz, siz iptal etmediğiniz sürece otomatik olarak yenilenir ve ödeme yönteminizden ücret tahsil edilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "To the extent permitted by the applicable law, payments are non-refundable and we do not provide refunds or credits for any partial subscription periods or unused Netflix content.",
+       "explanation_tr": "Hizmeti dönem ortasında iptal etseniz bile, kullanılmayan süre için para iadesi veya kredi alamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may change our subscription plans and the price of our service from time to time. We will notify you at least one month before any price changes or changes to your subscription plan will become effective.",
+       "explanation_tr": "Şirket, abonelik planlarını ve fiyatlarını tek taraflı olarak değiştirme hakkını saklı tutar.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "Netflix is free to use any comments, information, ideas, concepts, reviews, or techniques or any other material contained in any communication you may send to us (\"Feedback\"), including responses to questionnaires or through postings to the Netflix service, including our websites and user interfaces, worldwide and in perpetuity without further compensation, acknowledgement or payment to you",
+       "explanation_tr": "Netflix'e gönderdiğiniz her türlü geri bildirim, fikir veya yorumu, size herhangi bir ödeme yapmaksızın dünya çapında ve süresiz olarak kullanma hakkına sahiptir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "The Netflix service is provided \"as is\" and without warranty or condition. In particular, our service may not be uninterrupted or error-free. You waive all special, indirect and consequential damages against us.",
+       "explanation_tr": "Hizmet 'olduğu gibi' sunulur ve şirket, hizmetin kesintisiz veya hatasız olacağına dair garanti vermez; ayrıca dolaylı zararlardan sorumlu tutulamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "medium",
+       "quote": "YOU AND NETFLIX AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat etmeniz istenmektedir; taleplerinizi yalnızca bireysel olarak iletebilirsiniz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "low",
+       "quote": "In certain instances, Customer Service may best be able to assist you by using a remote access support tool through which we have full access to your computer.",
+       "explanation_tr": "Müşteri hizmetleri, destek sağlamak amacıyla bilgisayarınıza tam erişim talep edebilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may assign or transfer our agreement with you including our associated rights and obligations at any time and you agree to cooperate with us in connection with such an assignment or transfer.",
+       "explanation_tr": "Şirket, sizinle olan sözleşmesini ve haklarını üçüncü taraflara devredebilir.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 67
     },
     {
-     "category": "cancellation_difficulty",
-     "severity": "medium",
-     "quote": "To the extent permitted by the applicable law, payments are non-refundable and we do not provide refunds or credits for any partial subscription periods or unused Netflix content.",
-     "explanation_tr": "Hizmeti dönem ortasında iptal etseniz bile, kullanılmayan süre için para iadesi veya kredi alamazsınız.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      0,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "Unless you cancel your subscription before your billing date, you authorize us to charge the subscription fee for the next billing cycle to your Payment Method",
+       "explanation_tr": "Aboneliğiniz, siz iptal etmediğiniz sürece otomatik olarak yenilenir ve ödeme yönteminizden ücret tahsil edilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "To the extent permitted by the applicable law, payments are non-refundable and we do not provide refunds or credits for any partial subscription periods or unused Netflix content.",
+       "explanation_tr": "Hizmeti dönem ortasında iptal etseniz bile, kullanılmayan süre için para iadesi veya kredi alamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may change our subscription plans and the price of our service from time to time. We will notify you at least one month before any price changes or changes to your subscription plan will become effective.",
+       "explanation_tr": "Şirket, abonelik planlarını ve fiyatlarını tek taraflı olarak değiştirme hakkını saklı tutar.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "Netflix is free to use any comments, information, ideas, concepts, reviews, or techniques or any other material contained in any communication you may send to us (\"Feedback\"), including responses to questionnaires or through postings to the Netflix service, including our websites and user interfaces, worldwide and in perpetuity without further compensation, acknowledgement or payment to you",
+       "explanation_tr": "Netflix'e gönderdiğiniz her türlü geri bildirim, fikir veya yorumu, size herhangi bir ödeme yapmaksızın dünya çapında ve süresiz olarak kullanma hakkına sahiptir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "The Netflix service is provided \"as is\" and without warranty or condition. In particular, our service may not be uninterrupted or error-free. You waive all special, indirect and consequential damages against us.",
+       "explanation_tr": "Hizmet 'olduğu gibi' sunulur ve şirket, hizmetin kesintisiz veya hatasız olacağına dair garanti vermez; ayrıca dolaylı zararlardan sorumlu tutulamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "medium",
+       "quote": "YOU AND NETFLIX AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat etmeniz istenmektedir; taleplerinizi yalnızca bireysel olarak iletebilirsiniz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "low",
+       "quote": "In certain instances, Customer Service may best be able to assist you by using a remote access support tool through which we have full access to your computer.",
+       "explanation_tr": "Müşteri hizmetleri, destek sağlamak amacıyla bilgisayarınıza tam erişim talep edebilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may assign or transfer our agreement with you including our associated rights and obligations at any time and you agree to cooperate with us in connection with such an assignment or transfer.",
+       "explanation_tr": "Şirket, sizinle olan sözleşmesini ve haklarını üçüncü taraflara devredebilir.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 67
     },
     {
-     "category": "unilateral_change",
-     "severity": "medium",
-     "quote": "We may change our subscription plans and the price of our service from time to time. We will notify you at least one month before any price changes or changes to your subscription plan will become effective.",
-     "explanation_tr": "Şirket, abonelik planlarını ve fiyatlarını tek taraflı olarak değiştirme hakkını saklı tutar.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "content_license",
-     "severity": "high",
-     "quote": "Netflix is free to use any comments, information, ideas, concepts, reviews, or techniques or any other material contained in any communication you may send to us (\"Feedback\"), including responses to questionnaires or through postings to the Netflix service, including our websites and user interfaces, worldwide and in perpetuity without further compensation, acknowledgement or payment to you",
-     "explanation_tr": "Netflix'e gönderdiğiniz her türlü geri bildirim, fikir veya yorumu, size herhangi bir ödeme yapmaksızın dünya çapında ve süresiz olarak kullanma hakkına sahiptir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "The Netflix service is provided \"as is\" and without warranty or condition. In particular, our service may not be uninterrupted or error-free. You waive all special, indirect and consequential damages against us.",
-     "explanation_tr": "Hizmet 'olduğu gibi' sunulur ve şirket, hizmetin kesintisiz veya hatasız olacağına dair garanti vermez; ayrıca dolaylı zararlardan sorumlu tutulamazsınız.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "arbitration_waiver",
-     "severity": "medium",
-     "quote": "YOU AND NETFLIX AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.",
-     "explanation_tr": "Toplu dava açma hakkınızdan feragat etmeniz istenmektedir; taleplerinizi yalnızca bireysel olarak iletebilirsiniz.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "other",
-     "severity": "low",
-     "quote": "In certain instances, Customer Service may best be able to assist you by using a remote access support tool through which we have full access to your computer.",
-     "explanation_tr": "Müşteri hizmetleri, destek sağlamak amacıyla bilgisayarınıza tam erişim talep edebilir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "unilateral_change",
-     "severity": "medium",
-     "quote": "We may assign or transfer our agreement with you including our associated rights and obligations at any time and you agree to cooperate with us in connection with such an assignment or transfer.",
-     "explanation_tr": "Şirket, sizinle olan sözleşmesini ve haklarını üçüncü taraflara devredebilir.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      0,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "Unless you cancel your subscription before your billing date, you authorize us to charge the subscription fee for the next billing cycle to your Payment Method",
+       "explanation_tr": "Aboneliğiniz, siz iptal etmediğiniz sürece otomatik olarak yenilenir ve ödeme yönteminizden ücret tahsil edilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "To the extent permitted by the applicable law, payments are non-refundable and we do not provide refunds or credits for any partial subscription periods or unused Netflix content.",
+       "explanation_tr": "Hizmeti dönem ortasında iptal etseniz bile, kullanılmayan süre için para iadesi veya kredi alamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may change our subscription plans and the price of our service from time to time. We will notify you at least one month before any price changes or changes to your subscription plan will become effective.",
+       "explanation_tr": "Şirket, abonelik planlarını ve fiyatlarını tek taraflı olarak değiştirme hakkını saklı tutar.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "Netflix is free to use any comments, information, ideas, concepts, reviews, or techniques or any other material contained in any communication you may send to us (\"Feedback\"), including responses to questionnaires or through postings to the Netflix service, including our websites and user interfaces, worldwide and in perpetuity without further compensation, acknowledgement or payment to you",
+       "explanation_tr": "Netflix'e gönderdiğiniz her türlü geri bildirim, fikir veya yorumu, size herhangi bir ödeme yapmaksızın dünya çapında ve süresiz olarak kullanma hakkına sahiptir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "The Netflix service is provided \"as is\" and without warranty or condition. In particular, our service may not be uninterrupted or error-free. You waive all special, indirect and consequential damages against us.",
+       "explanation_tr": "Hizmet 'olduğu gibi' sunulur ve şirket, hizmetin kesintisiz veya hatasız olacağına dair garanti vermez; ayrıca dolaylı zararlardan sorumlu tutulamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "medium",
+       "quote": "YOU AND NETFLIX AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat etmeniz istenmektedir; taleplerinizi yalnızca bireysel olarak iletebilirsiniz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "low",
+       "quote": "In certain instances, Customer Service may best be able to assist you by using a remote access support tool through which we have full access to your computer.",
+       "explanation_tr": "Müşteri hizmetleri, destek sağlamak amacıyla bilgisayarınıza tam erişim talep edebilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may assign or transfer our agreement with you including our associated rights and obligations at any time and you agree to cooperate with us in connection with such an assignment or transfer.",
+       "explanation_tr": "Şirket, sizinle olan sözleşmesini ve haklarını üçüncü taraflara devredebilir.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 67
     }
-   ],
-   "rejected": []
+   ]
   },
   {
    "id": "reddit",
    "truncated": false,
-   "findings": [
+   "runs": [
     {
-     "category": "unilateral_change",
-     "severity": "medium",
-     "quote": "We reserve the right to modify, suspend, or discontinue the Services (in whole or in part) at any time, with or without notice to you.",
-     "explanation_tr": "Reddit, hizmetlerini herhangi bir zamanda, bildirimde bulunmaksızın değiştirme, askıya alma veya sonlandırma hakkını saklı tutar.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      1,
+      3,
+      4,
+      10,
+      12,
+      14,
+      15
+     ],
+     "findings": [
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We reserve the right to modify, suspend, or discontinue the Services (in whole or in part) at any time, with or without notice to you.",
+       "explanation_tr": "Reddit, hizmetlerini herhangi bir zamanda, bildirimde bulunmaksızın değiştirme, askıya alma veya sonlandırma hakkını saklı tutar.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "When Your Content is created with or submitted to the Services, you grant us a worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license to use, copy, modify, adapt, prepare derivative works of, distribute, store, perform, and display Your Content",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde Reddit'e dünya çapında, kalıcı, geri alınamaz ve alt lisanslanabilir çok geniş kapsamlı bir kullanım hakkı veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "For example, this license includes the right to use Your Content to train AI and machine learning models, as further described in our Public Content Policy.",
+       "explanation_tr": "Reddit, paylaştığınız içerikleri yapay zeka ve makine öğrenimi modellerini eğitmek için kullanma hakkına sahiptir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "low",
+       "quote": "You also agree that we may remove metadata associated with Your Content, and you irrevocably waive any claims and assertions of moral rights or attribution with respect to Your Content.",
+       "explanation_tr": "İçeriğinizle ilgili manevi haklarınızdan ve atıf taleplerinizden feragat ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "high",
+       "quote": "IN NO EVENT WILL THE AGGREGATE LIABILITY OF THE REDDIT ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS ($100) OR ANY AMOUNT YOU PAID REDDIT IN THE PREVIOUS SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.",
+       "explanation_tr": "Reddit'in size karşı sorumluluğu, 100 ABD Doları veya son altı ayda ödediğiniz tutar ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "By continuing to access or use the Services on or after the Effective Date of the revised Terms, you agree to be bound by the revised Terms.",
+       "explanation_tr": "Hizmeti kullanmaya devam etmeniz, güncellenen şartları otomatik olarak kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "To the fullest extent permitted by applicable law, we may suspend or terminate your Account, moderator status, or ability to access or use the Services at any time for any or no reason",
+       "explanation_tr": "Reddit, hesabınızı veya hizmete erişiminizi herhangi bir gerekçe göstermeksizin dilediği zaman askıya alabilir veya sonlandırabilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF ANY KIND",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; Reddit, hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti vermez.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 72
     },
     {
-     "category": "content_license",
-     "severity": "high",
-     "quote": "When Your Content is created with or submitted to the Services, you grant us a worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license to use, copy, modify, adapt, prepare derivative works of, distribute, store, perform, and display Your Content",
-     "explanation_tr": "Paylaştığınız içerikler üzerinde Reddit'e dünya çapında, kalıcı, geri alınamaz ve alt lisanslanabilir çok geniş kapsamlı bir kullanım hakkı veriyorsunuz.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      1,
+      3,
+      4,
+      10,
+      12,
+      14,
+      15
+     ],
+     "findings": [
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We reserve the right to modify, suspend, or discontinue the Services (in whole or in part) at any time, with or without notice to you.",
+       "explanation_tr": "Reddit, hizmetlerini herhangi bir zamanda, bildirimde bulunmaksızın değiştirme, askıya alma veya sonlandırma hakkını saklı tutar.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "When Your Content is created with or submitted to the Services, you grant us a worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license to use, copy, modify, adapt, prepare derivative works of, distribute, store, perform, and display Your Content",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde Reddit'e dünya çapında, kalıcı, geri alınamaz ve alt lisanslanabilir çok geniş kapsamlı bir kullanım hakkı veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "For example, this license includes the right to use Your Content to train AI and machine learning models, as further described in our Public Content Policy.",
+       "explanation_tr": "Reddit, paylaştığınız içerikleri yapay zeka ve makine öğrenimi modellerini eğitmek için kullanma hakkına sahiptir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "low",
+       "quote": "You also agree that we may remove metadata associated with Your Content, and you irrevocably waive any claims and assertions of moral rights or attribution with respect to Your Content.",
+       "explanation_tr": "İçeriğinizle ilgili manevi haklarınızdan ve atıf taleplerinizden feragat ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "high",
+       "quote": "IN NO EVENT WILL THE AGGREGATE LIABILITY OF THE REDDIT ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS ($100) OR ANY AMOUNT YOU PAID REDDIT IN THE PREVIOUS SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.",
+       "explanation_tr": "Reddit'in size karşı sorumluluğu, 100 ABD Doları veya son altı ayda ödediğiniz tutar ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "By continuing to access or use the Services on or after the Effective Date of the revised Terms, you agree to be bound by the revised Terms.",
+       "explanation_tr": "Hizmeti kullanmaya devam etmeniz, güncellenen şartları otomatik olarak kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "To the fullest extent permitted by applicable law, we may suspend or terminate your Account, moderator status, or ability to access or use the Services at any time for any or no reason",
+       "explanation_tr": "Reddit, hesabınızı veya hizmete erişiminizi herhangi bir gerekçe göstermeksizin dilediği zaman askıya alabilir veya sonlandırabilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF ANY KIND",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; Reddit, hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti vermez.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 72
     },
     {
-     "category": "content_license",
-     "severity": "medium",
-     "quote": "For example, this license includes the right to use Your Content to train AI and machine learning models, as further described in our Public Content Policy.",
-     "explanation_tr": "Reddit, paylaştığınız içerikleri yapay zeka ve makine öğrenimi modellerini eğitmek için kullanma hakkına sahiptir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "content_license",
-     "severity": "low",
-     "quote": "You also agree that we may remove metadata associated with Your Content, and you irrevocably waive any claims and assertions of moral rights or attribution with respect to Your Content.",
-     "explanation_tr": "İçeriğinizle ilgili manevi haklarınızdan ve atıf taleplerinizden feragat ediyorsunuz.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "high",
-     "quote": "IN NO EVENT WILL THE AGGREGATE LIABILITY OF THE REDDIT ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS ($100) OR ANY AMOUNT YOU PAID REDDIT IN THE PREVIOUS SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.",
-     "explanation_tr": "Reddit'in size karşı sorumluluğu, 100 ABD Doları veya son altı ayda ödediğiniz tutar ile sınırlandırılmıştır.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "unilateral_change",
-     "severity": "medium",
-     "quote": "By continuing to access or use the Services on or after the Effective Date of the revised Terms, you agree to be bound by the revised Terms.",
-     "explanation_tr": "Hizmeti kullanmaya devam etmeniz, güncellenen şartları otomatik olarak kabul ettiğiniz anlamına gelir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "other",
-     "severity": "medium",
-     "quote": "To the fullest extent permitted by applicable law, we may suspend or terminate your Account, moderator status, or ability to access or use the Services at any time for any or no reason",
-     "explanation_tr": "Reddit, hesabınızı veya hizmete erişiminizi herhangi bir gerekçe göstermeksizin dilediği zaman askıya alabilir veya sonlandırabilir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF ANY KIND",
-     "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; Reddit, hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti vermez.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      1,
+      3,
+      4,
+      10,
+      12,
+      14,
+      15
+     ],
+     "findings": [
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We reserve the right to modify, suspend, or discontinue the Services (in whole or in part) at any time, with or without notice to you.",
+       "explanation_tr": "Reddit, hizmetlerini herhangi bir zamanda, bildirimde bulunmaksızın değiştirme, askıya alma veya sonlandırma hakkını saklı tutar.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "When Your Content is created with or submitted to the Services, you grant us a worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license to use, copy, modify, adapt, prepare derivative works of, distribute, store, perform, and display Your Content",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde Reddit'e dünya çapında, kalıcı, geri alınamaz ve alt lisanslanabilir çok geniş kapsamlı bir kullanım hakkı veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "For example, this license includes the right to use Your Content to train AI and machine learning models, as further described in our Public Content Policy.",
+       "explanation_tr": "Reddit, paylaştığınız içerikleri yapay zeka ve makine öğrenimi modellerini eğitmek için kullanma hakkına sahiptir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "low",
+       "quote": "You also agree that we may remove metadata associated with Your Content, and you irrevocably waive any claims and assertions of moral rights or attribution with respect to Your Content.",
+       "explanation_tr": "İçeriğinizle ilgili manevi haklarınızdan ve atıf taleplerinizden feragat ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "high",
+       "quote": "IN NO EVENT WILL THE AGGREGATE LIABILITY OF THE REDDIT ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS ($100) OR ANY AMOUNT YOU PAID REDDIT IN THE PREVIOUS SIX MONTHS FOR THE SERVICES GIVING RISE TO THE CLAIM.",
+       "explanation_tr": "Reddit'in size karşı sorumluluğu, 100 ABD Doları veya son altı ayda ödediğiniz tutar ile sınırlandırılmıştır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "By continuing to access or use the Services on or after the Effective Date of the revised Terms, you agree to be bound by the revised Terms.",
+       "explanation_tr": "Hizmeti kullanmaya devam etmeniz, güncellenen şartları otomatik olarak kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "To the fullest extent permitted by applicable law, we may suspend or terminate your Account, moderator status, or ability to access or use the Services at any time for any or no reason",
+       "explanation_tr": "Reddit, hesabınızı veya hizmete erişiminizi herhangi bir gerekçe göstermeksizin dilediği zaman askıya alabilir veya sonlandırabilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF ANY KIND",
+       "explanation_tr": "Hizmetler 'olduğu gibi' sunulmaktadır; Reddit, hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti vermez.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 72
     }
-   ],
-   "rejected": []
+   ]
   },
   {
    "id": "spotify",
    "truncated": false,
-   "findings": [
+   "runs": [
     {
-     "category": "auto_renewal",
-     "severity": "medium",
-     "quote": "Unless otherwise indicated (for example, if you have signed up for a Prepaid Period), Paid Subscriptions continue indefinitely until cancelled. You will be billed on a recurring basis on the first day of each billing period and you will pay and you authorise us (or the applicable third party, if you sign up through a third party) to charge your payment method the then-current subscription fee.",
-     "explanation_tr": "Ücretli abonelikler siz iptal edene kadar otomatik olarak yenilenir ve ödeme yönteminizden düzenli olarak ücret tahsil edilir.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      3,
+      4,
+      7,
+      13,
+      14,
+      17,
+      18,
+      19
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "Unless otherwise indicated (for example, if you have signed up for a Prepaid Period), Paid Subscriptions continue indefinitely until cancelled. You will be billed on a recurring basis on the first day of each billing period and you will pay and you authorise us (or the applicable third party, if you sign up through a third party) to charge your payment method the then-current subscription fee.",
+       "explanation_tr": "Ücretli abonelikler siz iptal edene kadar otomatik olarak yenilenir ve ödeme yönteminizden düzenli olarak ücret tahsil edilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "Unless otherwise required by law, we do not provide refunds or credits for any partial subscription periods, except as expressly stated in these Terms.",
+       "explanation_tr": "Aboneliğinizi dönem ortasında iptal etseniz bile, kalan süre için para iadesi veya kredi alamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may make changes to these Terms (including any additional Spotify terms and conditions incorporated by reference herein) from time to time by notifying you of such changes by any reasonable means... Your use of the Spotify Service following any changes to these Terms will constitute your acceptance of such changes.",
+       "explanation_tr": "Spotify, hizmet şartlarını tek taraflı olarak değiştirebilir ve hizmeti kullanmaya devam etmeniz bu değişiklikleri kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "Accordingly, you hereby grant to Spotify a non-exclusive, transferable, sublicensable, royalty-free, fully paid, irrevocable, worldwide license to reproduce, make available, perform and display, translate, modify, create derivative works from, distribute, and otherwise use any such User Content through any medium",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde Spotify'a, içeriğinizi değiştirme, alt lisanslama ve ticari olarak kullanma hakkı veren çok geniş ve geri alınamaz bir lisans veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "Where applicable and to the extent permitted under applicable law, you also agree to waive, and not to enforce, any \"moral rights\" or equivalent rights, such as your right to be identified as the author of any User Content, including Feedback, and your right to object to derogatory treatment of such User Content.",
+       "explanation_tr": "İçeriğinizin yazarı olarak tanınma veya içeriğinizin değiştirilmesine itiraz etme gibi manevi haklarınızdan feragat etmeniz istenmektedir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SPOTIFY SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.",
+       "explanation_tr": "Hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti verilmemektedir; hizmet olduğu gibi sunulmaktadır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ANY CLAIM ARISING UNDER THESE TERMS MUST BE COMMENCED (BY FILING A DEMAND OR FILING AN INDIVIDUAL ACTION AS SPECIFIED UNDER THE ARBITRATION AGREEMENT BELOW) WITHIN ONE (1) YEAR AFTER THE DATE THE PARTY ASSERTING THE CLAIM FIRST KNOWS OR REASONABLY SHOULD KNOW OF THE ACT, OMISSION, OR DEFAULT GIVING RISE TO THE CLAIM",
+       "explanation_tr": "Hizmetle ilgili yasal haklarınızı aramak için çok kısa bir süre olan 1 yıllık bir zaman aşımı sınırı getirilmiştir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "YOU AND SPOTIFY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER IN ARBITRATION OR LITIGATION ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, CONSOLIDATED, PRIVATE ATTORNEY GENERAL, OR REPRESENTATIVE ACTION.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyor ve uyuşmazlıkları bireysel tahkim yoluyla çözmeyi kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "You agree to indemnify and hold Spotify harmless from and against all damages, losses, and expenses of any kind (including reasonable attorneys' fees and costs) arising out of or related to: (1) your breach of any of these Terms",
+       "explanation_tr": "Şartları ihlal etmeniz durumunda Spotify'ın uğrayacağı tüm zararları ve yasal masrafları karşılamayı kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 77
     },
     {
-     "category": "cancellation_difficulty",
-     "severity": "medium",
-     "quote": "Unless otherwise required by law, we do not provide refunds or credits for any partial subscription periods, except as expressly stated in these Terms.",
-     "explanation_tr": "Aboneliğinizi dönem ortasında iptal etseniz bile, kalan süre için para iadesi veya kredi alamazsınız.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      3,
+      4,
+      7,
+      13,
+      14,
+      17,
+      18,
+      19
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "Unless otherwise indicated (for example, if you have signed up for a Prepaid Period), Paid Subscriptions continue indefinitely until cancelled. You will be billed on a recurring basis on the first day of each billing period and you will pay and you authorise us (or the applicable third party, if you sign up through a third party) to charge your payment method the then-current subscription fee.",
+       "explanation_tr": "Ücretli abonelikler siz iptal edene kadar otomatik olarak yenilenir ve ödeme yönteminizden düzenli olarak ücret tahsil edilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "Unless otherwise required by law, we do not provide refunds or credits for any partial subscription periods, except as expressly stated in these Terms.",
+       "explanation_tr": "Aboneliğinizi dönem ortasında iptal etseniz bile, kalan süre için para iadesi veya kredi alamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may make changes to these Terms (including any additional Spotify terms and conditions incorporated by reference herein) from time to time by notifying you of such changes by any reasonable means... Your use of the Spotify Service following any changes to these Terms will constitute your acceptance of such changes.",
+       "explanation_tr": "Spotify, hizmet şartlarını tek taraflı olarak değiştirebilir ve hizmeti kullanmaya devam etmeniz bu değişiklikleri kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "Accordingly, you hereby grant to Spotify a non-exclusive, transferable, sublicensable, royalty-free, fully paid, irrevocable, worldwide license to reproduce, make available, perform and display, translate, modify, create derivative works from, distribute, and otherwise use any such User Content through any medium",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde Spotify'a, içeriğinizi değiştirme, alt lisanslama ve ticari olarak kullanma hakkı veren çok geniş ve geri alınamaz bir lisans veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "Where applicable and to the extent permitted under applicable law, you also agree to waive, and not to enforce, any \"moral rights\" or equivalent rights, such as your right to be identified as the author of any User Content, including Feedback, and your right to object to derogatory treatment of such User Content.",
+       "explanation_tr": "İçeriğinizin yazarı olarak tanınma veya içeriğinizin değiştirilmesine itiraz etme gibi manevi haklarınızdan feragat etmeniz istenmektedir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SPOTIFY SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.",
+       "explanation_tr": "Hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti verilmemektedir; hizmet olduğu gibi sunulmaktadır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ANY CLAIM ARISING UNDER THESE TERMS MUST BE COMMENCED (BY FILING A DEMAND OR FILING AN INDIVIDUAL ACTION AS SPECIFIED UNDER THE ARBITRATION AGREEMENT BELOW) WITHIN ONE (1) YEAR AFTER THE DATE THE PARTY ASSERTING THE CLAIM FIRST KNOWS OR REASONABLY SHOULD KNOW OF THE ACT, OMISSION, OR DEFAULT GIVING RISE TO THE CLAIM",
+       "explanation_tr": "Hizmetle ilgili yasal haklarınızı aramak için çok kısa bir süre olan 1 yıllık bir zaman aşımı sınırı getirilmiştir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "YOU AND SPOTIFY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER IN ARBITRATION OR LITIGATION ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, CONSOLIDATED, PRIVATE ATTORNEY GENERAL, OR REPRESENTATIVE ACTION.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyor ve uyuşmazlıkları bireysel tahkim yoluyla çözmeyi kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "You agree to indemnify and hold Spotify harmless from and against all damages, losses, and expenses of any kind (including reasonable attorneys' fees and costs) arising out of or related to: (1) your breach of any of these Terms",
+       "explanation_tr": "Şartları ihlal etmeniz durumunda Spotify'ın uğrayacağı tüm zararları ve yasal masrafları karşılamayı kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 77
     },
     {
-     "category": "unilateral_change",
-     "severity": "medium",
-     "quote": "We may make changes to these Terms (including any additional Spotify terms and conditions incorporated by reference herein) from time to time by notifying you of such changes by any reasonable means... Your use of the Spotify Service following any changes to these Terms will constitute your acceptance of such changes.",
-     "explanation_tr": "Spotify, hizmet şartlarını tek taraflı olarak değiştirebilir ve hizmeti kullanmaya devam etmeniz bu değişiklikleri kabul ettiğiniz anlamına gelir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "content_license",
-     "severity": "high",
-     "quote": "Accordingly, you hereby grant to Spotify a non-exclusive, transferable, sublicensable, royalty-free, fully paid, irrevocable, worldwide license to reproduce, make available, perform and display, translate, modify, create derivative works from, distribute, and otherwise use any such User Content through any medium",
-     "explanation_tr": "Paylaştığınız içerikler üzerinde Spotify'a, içeriğinizi değiştirme, alt lisanslama ve ticari olarak kullanma hakkı veren çok geniş ve geri alınamaz bir lisans veriyorsunuz.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "content_license",
-     "severity": "medium",
-     "quote": "Where applicable and to the extent permitted under applicable law, you also agree to waive, and not to enforce, any \"moral rights\" or equivalent rights, such as your right to be identified as the author of any User Content, including Feedback, and your right to object to derogatory treatment of such User Content.",
-     "explanation_tr": "İçeriğinizin yazarı olarak tanınma veya içeriğinizin değiştirilmesine itiraz etme gibi manevi haklarınızdan feragat etmeniz istenmektedir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "THE SPOTIFY SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.",
-     "explanation_tr": "Hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti verilmemektedir; hizmet olduğu gibi sunulmaktadır.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "liability_limit",
-     "severity": "medium",
-     "quote": "TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ANY CLAIM ARISING UNDER THESE TERMS MUST BE COMMENCED (BY FILING A DEMAND OR FILING AN INDIVIDUAL ACTION AS SPECIFIED UNDER THE ARBITRATION AGREEMENT BELOW) WITHIN ONE (1) YEAR AFTER THE DATE THE PARTY ASSERTING THE CLAIM FIRST KNOWS OR REASONABLY SHOULD KNOW OF THE ACT, OMISSION, OR DEFAULT GIVING RISE TO THE CLAIM",
-     "explanation_tr": "Hizmetle ilgili yasal haklarınızı aramak için çok kısa bir süre olan 1 yıllık bir zaman aşımı sınırı getirilmiştir.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "arbitration_waiver",
-     "severity": "high",
-     "quote": "YOU AND SPOTIFY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER IN ARBITRATION OR LITIGATION ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, CONSOLIDATED, PRIVATE ATTORNEY GENERAL, OR REPRESENTATIVE ACTION.",
-     "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyor ve uyuşmazlıkları bireysel tahkim yoluyla çözmeyi kabul ediyorsunuz.",
-     "confidence": 1,
-     "verified": true
-    },
-    {
-     "category": "other",
-     "severity": "medium",
-     "quote": "You agree to indemnify and hold Spotify harmless from and against all damages, losses, and expenses of any kind (including reasonable attorneys' fees and costs) arising out of or related to: (1) your breach of any of these Terms",
-     "explanation_tr": "Şartları ihlal etmeniz durumunda Spotify'ın uğrayacağı tüm zararları ve yasal masrafları karşılamayı kabul ediyorsunuz.",
-     "confidence": 1,
-     "verified": true
+     "caught": [
+      3,
+      4,
+      7,
+      13,
+      14,
+      17,
+      18,
+      19
+     ],
+     "findings": [
+      {
+       "category": "auto_renewal",
+       "severity": "medium",
+       "quote": "Unless otherwise indicated (for example, if you have signed up for a Prepaid Period), Paid Subscriptions continue indefinitely until cancelled. You will be billed on a recurring basis on the first day of each billing period and you will pay and you authorise us (or the applicable third party, if you sign up through a third party) to charge your payment method the then-current subscription fee.",
+       "explanation_tr": "Ücretli abonelikler siz iptal edene kadar otomatik olarak yenilenir ve ödeme yönteminizden düzenli olarak ücret tahsil edilir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "cancellation_difficulty",
+       "severity": "medium",
+       "quote": "Unless otherwise required by law, we do not provide refunds or credits for any partial subscription periods, except as expressly stated in these Terms.",
+       "explanation_tr": "Aboneliğinizi dönem ortasında iptal etseniz bile, kalan süre için para iadesi veya kredi alamazsınız.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "unilateral_change",
+       "severity": "medium",
+       "quote": "We may make changes to these Terms (including any additional Spotify terms and conditions incorporated by reference herein) from time to time by notifying you of such changes by any reasonable means... Your use of the Spotify Service following any changes to these Terms will constitute your acceptance of such changes.",
+       "explanation_tr": "Spotify, hizmet şartlarını tek taraflı olarak değiştirebilir ve hizmeti kullanmaya devam etmeniz bu değişiklikleri kabul ettiğiniz anlamına gelir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "high",
+       "quote": "Accordingly, you hereby grant to Spotify a non-exclusive, transferable, sublicensable, royalty-free, fully paid, irrevocable, worldwide license to reproduce, make available, perform and display, translate, modify, create derivative works from, distribute, and otherwise use any such User Content through any medium",
+       "explanation_tr": "Paylaştığınız içerikler üzerinde Spotify'a, içeriğinizi değiştirme, alt lisanslama ve ticari olarak kullanma hakkı veren çok geniş ve geri alınamaz bir lisans veriyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "content_license",
+       "severity": "medium",
+       "quote": "Where applicable and to the extent permitted under applicable law, you also agree to waive, and not to enforce, any \"moral rights\" or equivalent rights, such as your right to be identified as the author of any User Content, including Feedback, and your right to object to derogatory treatment of such User Content.",
+       "explanation_tr": "İçeriğinizin yazarı olarak tanınma veya içeriğinizin değiştirilmesine itiraz etme gibi manevi haklarınızdan feragat etmeniz istenmektedir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "THE SPOTIFY SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT ANY WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY.",
+       "explanation_tr": "Hizmetin hatasız veya kesintisiz çalışacağına dair hiçbir garanti verilmemektedir; hizmet olduğu gibi sunulmaktadır.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, ANY CLAIM ARISING UNDER THESE TERMS MUST BE COMMENCED (BY FILING A DEMAND OR FILING AN INDIVIDUAL ACTION AS SPECIFIED UNDER THE ARBITRATION AGREEMENT BELOW) WITHIN ONE (1) YEAR AFTER THE DATE THE PARTY ASSERTING THE CLAIM FIRST KNOWS OR REASONABLY SHOULD KNOW OF THE ACT, OMISSION, OR DEFAULT GIVING RISE TO THE CLAIM",
+       "explanation_tr": "Hizmetle ilgili yasal haklarınızı aramak için çok kısa bir süre olan 1 yıllık bir zaman aşımı sınırı getirilmiştir.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "arbitration_waiver",
+       "severity": "high",
+       "quote": "YOU AND SPOTIFY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER IN ARBITRATION OR LITIGATION ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, COLLECTIVE, CONSOLIDATED, PRIVATE ATTORNEY GENERAL, OR REPRESENTATIVE ACTION.",
+       "explanation_tr": "Toplu dava açma hakkınızdan feragat ediyor ve uyuşmazlıkları bireysel tahkim yoluyla çözmeyi kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      },
+      {
+       "category": "other",
+       "severity": "medium",
+       "quote": "You agree to indemnify and hold Spotify harmless from and against all damages, losses, and expenses of any kind (including reasonable attorneys' fees and costs) arising out of or related to: (1) your breach of any of these Terms",
+       "explanation_tr": "Şartları ihlal etmeniz durumunda Spotify'ın uğrayacağı tüm zararları ve yasal masrafları karşılamayı kabul ediyorsunuz.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 77
     }
-   ],
-   "rejected": []
+   ]
   }
  ]
 }
