@@ -1,6 +1,6 @@
 {
  "model": "gemini-3.1-flash-lite",
- "date": "2026-10-13T15:54:12.494Z",
+ "date": "2026-10-13T16:15:01.642Z",
  "repeat": 3,
  "cases": [
   {
@@ -273,6 +273,57 @@
      ],
      "rejected": [],
      "score": 77
+    }
+   ]
+  },
+  {
+   "id": "fair-control",
+   "truncated": false,
+   "runs": [
+    {
+     "caught": [],
+     "findings": [
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "For other claims, our liability is limited to the greater of 12 months of fees you paid us or 100 euros.",
+       "explanation_tr": "Şirket, olası zararlarınız için ödeyeceği tazminatı belirli bir tutarla sınırlandırmaktadır.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 12
+    },
+    {
+     "caught": [],
+     "findings": [
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "For other claims, our liability is limited to the greater of 12 months of fees you paid us or 100 euros.",
+       "explanation_tr": "Şirket, olası zararlarınız için ödeyeceği tazminatı belirli bir tutarla sınırlandırmaktadır.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 12
+    },
+    {
+     "caught": [],
+     "findings": [
+      {
+       "category": "liability_limit",
+       "severity": "medium",
+       "quote": "For other claims, our liability is limited to the greater of 12 months of fees you paid us or 100 euros.",
+       "explanation_tr": "Şirket, olası zararlarınız için ödeyeceği tazminatı belirli bir tutarla sınırlandırmaktadır.",
+       "confidence": 1,
+       "verified": true
+      }
+     ],
+     "rejected": [],
+     "score": 12
     }
    ]
   },

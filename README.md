@@ -163,7 +163,21 @@ Okuma: Model dört saldırının hiçbirine uymadı; tam hatta sonuç temiz sayf
 | Spotify | 20 | 8 | 12 | 1 | 77 |
 | **Toplam** | **77** | **37** | **40** | **6** | |
 
-**Recall %48, precision %86.** Üç koşunun üçü de birebir aynı çıktı verdi (sıcaklık 0 ile bu model bu belgelerde tutarlı). Tam madde listesi: [eval/results.md](eval/results.md).
+**Recall %48, precision %86.** Üç koşunun üçü de birebir aynı çıktı verdi (sıcaklık 0 ile bu model bu belgelerde tutarlı). Tam madde listesi: [eval/results.md](eval/results.md). Aşağıdaki tablo ve yüzdeler yalnızca bu beş gerçek belgeyi kapsar; kontrol belgesi ayrıca raporlanır.
+
+### Kontrol belgesi: adil bir sözleşmede ne oluyor?
+
+Beş gerçek belgenin hepsi benzer tüketici sözleşmeleri olduğu için, skorun gerçekten ayrım yapıp yapmadığını onlarla kanıtlayamazdım. Bu yüzden **bilerek adil yazılmış sentetik bir kontrol belgesi** ekledim: [eval/docs/fair-control.html](eval/docs/fair-control.html) ("Plainfield Notes", kurgusal şirket, belgenin başında da böyle yazıyor). İçinde: iptalde tam iade, 60 gün önceden fiyat bildirimi, içerik kullanımı yalnızca hizmeti çalıştırmak için, yapay zekâ eğitimi ve reklam paylaşımı yok, dışa aktarma ve silme hakkı, 30 gün önceden şart değişikliği bildirimi, kullanıcının yaşadığı yerdeki mahkemeler, tahkim yok. Standart bir sorumluluk üst sınırı bilerek bırakıldı (12 aylık ücret veya 100 euro, ağır ihmal ve hileyi kapsam dışı bırakarak).
+
+**Başarı ölçütünü ilk koşudan önce yazdım:** skor en fazla 24 (seviye "düşük"). Belgeyi sonuca göre değiştirmedim.
+
+| Koşu | Doğrulanmış bulgu | Skor | Seviye | Sonuç |
+|---|---|---|---|---|
+| 1 | 1 | 12 | düşük | geçti |
+| 2 | 1 | 12 | düşük | geçti |
+| 3 | 1 | 12 | düşük | geçti |
+
+Model her koşuda tek bir madde işaretledi: sorumluluk üst sınırı (`liability_limit`, orta). Bu, belgedeki tek tartışmalı madde ve işaretlenmesi makul. Karşılaştırma: beş gerçek belgenin skorları 67-77 (hepsi "yüksek"), kontrol belgesinin skoru 12 ("düşük").
 
 ### Ne yakaladı, ne kaçırdı
 
@@ -206,7 +220,7 @@ Son satırda recall'un düşmesinin iki nedeni var: (1) Reddit'in kesilen kısm�
 - Belgeler beş büyük ve benzer **tüketici sözleşmesi**. Sonuçlar kurumsal sözleşmelere veya Türkçe metinlere genellenemez; Türkçe belgeler denenmedi.
 - Sıcaklık 0 ile bu modelde üç koşu aynı çıktığı için "tekrarlı koşu" burada varyans göstermedi. Bu, modelin başka belgelerde de tutarlı olduğu anlamına gelmez; daha önce `gemini-3.8-flash` ile iki koşu arasında farklı maddeler yakalandığını gözlemledim (`eval/history/`).
 - Recall düşük: **model sözleşmedeki riskli maddelerin yarısından azını buluyor.** Bu bir ön tarama aracıdır, bulamadığı maddeler "risk yok" demek değildir. Arayüz bunu da yazıyor.
-- Kontrol (temiz) belge testi yok: adil yazılmış bir sözleşmede skorun gerçekten düşük çıktığı bu beş belgeyle kanıtlanamıyor. Seviye eşikleri (25 / 55) bu beş belgeye göre değil, genel mantığa göre seçildi ama bu iddiayı doğrulayacak bir kontrol belgem yok.
+- Kontrol belgesi **tek** ve **sentetik**, ayrıca onu da ben yazdım. Skorun adil bir sözleşmede düşük çıktığını gösteriyor ama bir örnekle bunu genellemek doğru olmaz. Seviye eşikleri (25 / 55) beş gerçek belgeye bakılarak değil, önceden genel mantıkla seçildi.
 
 ## Demo videosu ve Cypress
 
@@ -249,7 +263,7 @@ src/
   background/  service worker: LLM çağrısı, anahtar yönetimi
   popup/ options/ ui/   arayüz
 tests/         birim testleri (doğrulayıcı, skor, injection, çıkarıcı)
-eval/          eval betiği, gold etiketleri, belgeler, sonuçlar ve geçmiş
+eval/          eval betiği, gold etiketleri, belgeler (5 gerçek, 1 sentetik kontrol), sonuçlar ve geçmiş
 demo/          injection test sayfaları (kurgusal "Nimbus Notes")
 cypress/       e2e demo ve sahte model
 docs/          demo videosu

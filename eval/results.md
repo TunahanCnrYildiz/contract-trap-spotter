@@ -122,3 +122,15 @@ Source: https://www.spotify.com/us/legal/end-user-agreement/ (retrieved 2026-10-
 - caught 3/3: [unilateral_change] Your use of the Spotify Service following any changes to these Terms will constitute your 
 - caught 3/3: [liability_limit] THE SPOTIFY SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT ANY WARRANTIES OF ANY 
 - FALSE ALARM 3/3: [content_license] Where applicable and to the extent permitted under applicable law, you also agree 
+
+### Control: Plainfield Notes Terms (synthetic control)
+
+Criterion (fixed before the first run): score at most 24.
+
+| Run | Verified findings | Score | Level | Result |
+|---|---|---|---|---|
+| 1 | 1 | 12 | low | pass |
+| 2 | 1 | 12 | low | pass |
+| 3 | 1 | 12 | low | pass |
+
+- flagged 3/3: [liability_limit, medium] For other claims, our liability is limited to the greater of 12 months of fees you paid us or 100 euros.

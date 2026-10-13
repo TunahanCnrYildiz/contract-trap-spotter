@@ -13,7 +13,7 @@ import { Window as HappyWindow } from "happy-dom";
 import { extractMainText } from "../src/content/main-text";
 
 type Gold = { category: string; anchor: string; note?: string };
-type Case = { id: string; title: string; file: string; source: string; stopBefore?: string; gold: Gold[] };
+type Case = { id: string; title: string; file: string; source: string; stopBefore?: string; control?: boolean; maxScore?: number; gold: Gold[] };
 
 const args = process.argv.slice(2);
 const checkOnly = args.includes("--check"); // validate gold anchors, no LLM calls
@@ -53,7 +53,7 @@ async function analyseWithRetry(text: string) {
     try {
       return await analyse(text, { apiKey, model });
     } catch (e) {
-      if (attempt >= 5) throw e;
+      if (attempt >= 8) throw e;
       await sleep(8000 * attempt);
     }
   }
@@ -73,8 +73,9 @@ const cases: Case[] = readdirSync("eval/cases")
   .map((f) => JSON.parse(readFileSync(join("eval/cases", f), "utf8")) as Case)
   .filter((c) => (only.length ? only.includes(c.id) : true))
   .filter((c) => {
-    if (c.gold.length === 0) console.log(`[${c.id}] skipped: no gold labels yet`);
-    return c.gold.length > 0;
+    const usable = c.control || c.gold.length > 0;
+    if (!usable) console.log(`[${c.id}] skipped: no gold labels yet`);
+    return usable;
   });
 
 if (cases.length === 0) {
@@ -146,7 +147,11 @@ const pct = (x: number) => `${(x * 100).toFixed(0)}%`;
 
 const rows: string[] = [];
 const details: string[] = [];
-for (const { c, truncated, runs } of done) {
+// Control documents are fair on purpose: they have no gold labels and are reported separately.
+const graded = done.filter((d) => !d.c.control);
+const controls = done.filter((d) => d.c.control);
+
+for (const { c, truncated, runs } of graded) {
   const hits = c.gold.map((_, i) => runs.filter((r) => r.caught.has(i)).length);
   const always = hits.filter((h) => h === runs.length).length;
   const never = hits.filter((h) => h === 0).length;
@@ -171,18 +176,40 @@ for (const { c, truncated, runs } of done) {
   details.push("");
 }
 
-const totalGold = done.reduce((n, d) => n + d.c.gold.length, 0);
+const totalGold = graded.reduce((n, d) => n + d.c.gold.length, 0);
 const perRun = Array.from({ length: repeat }, (_, r) => {
-  const caught = done.reduce((n, d) => n + d.runs[r]!.caught.size, 0);
-  const verified = done.reduce((n, d) => n + d.runs[r]!.verified, 0);
-  const falseN = done.reduce((n, d) => n + d.runs[r]!.falseAlarms.length, 0);
+  const caught = graded.reduce((n, d) => n + d.runs[r]!.caught.size, 0);
+  const verified = graded.reduce((n, d) => n + d.runs[r]!.verified, 0);
+  const falseN = graded.reduce((n, d) => n + d.runs[r]!.falseAlarms.length, 0);
   return { recall: caught / totalGold, precision: verified ? (verified - falseN) / verified : 0, caught, falseN };
 });
+
+const levelOf = (score: number) => (score >= 55 ? "high" : score >= 25 ? "medium" : "low");
+const controlLines: string[] = [];
+for (const { c, runs } of controls) {
+  const limit = c.maxScore ?? 24;
+  controlLines.push(`### Control: ${c.title}
+`);
+  controlLines.push(`Criterion (fixed before the first run): score at most ${limit}.
+`);
+  controlLines.push("| Run | Verified findings | Score | Level | Result |", "|---|---|---|---|---|");
+  runs.forEach((r, i) =>
+    controlLines.push(`| ${i + 1} | ${r.verified} | ${r.score} | ${levelOf(r.score)} | ${r.score <= limit ? "pass" : "FAIL"} |`),
+  );
+  controlLines.push("");
+  const seen = new Map<string, number>();
+  for (const r of runs) for (const f of r.findings as { category: string; severity: string; quote: string }[]) {
+    const key = `[${f.category}, ${f.severity}] ${f.quote}`;
+    seen.set(key, (seen.get(key) ?? 0) + 1);
+  }
+  for (const [k, n] of seen) controlLines.push(`- flagged ${n}/${runs.length}: ${k.slice(0, 140)}`);
+  controlLines.push("");
+}
 
 const md = [
   `# Eval results`,
   ``,
-  `Model: \`${model}\` · documents: ${done.length} · gold items: ${totalGold} · runs per document: ${repeat} · date: ${new Date().toISOString().slice(0, 10)}`,
+  `Model: \`${model}\` · documents: ${graded.length} · gold items: ${totalGold} · runs per document: ${repeat} · date: ${new Date().toISOString().slice(0, 10)}`,
   ``,
   `| Document | Gold | Caught per run, mean (range) | Caught every run | Caught some runs | Never caught | False alarms per run | Rejected by verifier per run | Score (mean) |`,
   `|---|---|---|---|---|---|---|---|---|`,
@@ -194,6 +221,7 @@ const md = [
   `"False alarm" means a verified finding that matches no gold label. It may be a real risk the labeller did not mark, so read each one before calling it wrong. "Some runs" means the item is caught in at least one but not all runs (flaky).`,
   ``,
   ...details,
+  ...controlLines,
 ].join("\n");
 
 writeFileSync("eval/results.md", md);

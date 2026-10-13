@@ -1,0 +1,9 @@
+{
+  "id": "fair-control",
+  "title": "Plainfield Notes Terms (synthetic control)",
+  "file": "fair-control.html",
+  "source": "Written for this project; the company is fictional. Success criterion fixed before the first run: score below 25 (level \"low\").",
+  "control": true,
+  "maxScore": 24,
+  "gold": []
+}
