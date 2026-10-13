@@ -27,7 +27,7 @@ export const FindingSchema = z.object({
 });
 
 export const LlmOutputSchema = z.object({
-  findings: z.array(FindingSchema).max(20),
+  findings: z.array(FindingSchema).max(40),
 });
 
 export type Finding = z.infer<typeof FindingSchema>;
