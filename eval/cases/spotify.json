@@ -3,5 +3,27 @@
   "title": "Spotify Terms of Use",
   "file": "spotify.txt",
   "source": "https://www.spotify.com/us/legal/end-user-agreement/ (retrieved 2026-10-13)",
-  "gold": []
+  "labelling_note": "Same rules as Netflix and Dropbox: advance-notice changes are low risk but included; strongly worded content licences included; standard assignment, governing-law, Apple third-party and mass-arbitration procedure clauses left out.",
+  "gold": [
+    { "category": "unilateral_change", "anchor": "Spotify reserves the right to change our Spotify Service offerings and their availability from time to time, without notice or liability to you" },
+    { "category": "other", "anchor": "Spotify may reclaim, or require you to change, your username for any reason" },
+    { "category": "unilateral_change", "anchor": "by continuing to use the Spotify Service after the price change takes effect, you will have accepted the new price" },
+    { "category": "auto_renewal", "anchor": "Paid Subscriptions continue indefinitely until cancelled" },
+    { "category": "cancellation_difficulty", "anchor": "we do not provide refunds or credits for any partial subscription periods" },
+    { "category": "other", "anchor": "we reserve the right to terminate a Paid Subscription at any time, on no less than 14 days' notice" },
+    { "category": "other", "anchor": "Spotify reserves the right to remove or disable access to any User Content for any or no reason" },
+    { "category": "content_license", "anchor": "non-exclusive, transferable, sublicensable, royalty-free, fully paid, irrevocable, worldwide license" },
+    { "category": "content_license", "anchor": "such Feedback is not confidential and may be used by Spotify without restriction and without payment to you" },
+    { "category": "other", "anchor": "to allow the Spotify Service to use the processor, bandwidth, and storage hardware on your Device" },
+    { "category": "cancellation_difficulty", "anchor": "Spotify will not refund any amounts that you have already paid" },
+    { "category": "liability_limit", "anchor": "YOUR SOLE AND EXCLUSIVE REMEDY FOR ANY PROBLEMS OR DISSATISFACTION WITH THE SPOTIFY SERVICE IS TO UNINSTALL ANY SPOTIFY SOFTWARE AND TO STOP USING THE SPOTIFY SERVICE" },
+    { "category": "liability_limit", "anchor": "THE GREATER OF (A) THE AMOUNTS PAID BY YOU TO SPOTIFY DURING THE TWELVE MONTHS PRIOR TO THE FIRST CLAIM" },
+    { "category": "liability_limit", "anchor": "WITHIN ONE (1) YEAR AFTER THE DATE THE PARTY ASSERTING THE CLAIM FIRST KNOWS OR REASONABLY SHOULD KNOW" },
+    { "category": "other", "anchor": "You agree to indemnify and hold Spotify harmless from and against all damages, losses, and expenses of any kind" },
+    { "category": "arbitration_waiver", "anchor": "THESE TERMS CONTAIN A MANDATORY ARBITRATION PROVISION" },
+    { "category": "arbitration_waiver", "anchor": "the parties agree to waive any right to a jury trial" },
+    { "category": "arbitration_waiver", "anchor": "YOU AND SPOTIFY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER IN ARBITRATION OR LITIGATION ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY" },
+    { "category": "unilateral_change", "anchor": "Your use of the Spotify Service following any changes to these Terms will constitute your acceptance of such changes" },
+    { "category": "liability_limit", "anchor": "THE SPOTIFY SERVICE IS PROVIDED \"AS IS\" AND \"AS AVAILABLE,\" WITHOUT ANY WARRANTIES OF ANY KIND" }
+  ]
 }
