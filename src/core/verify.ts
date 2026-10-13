@@ -36,7 +36,7 @@ export function levelFor(score: number): Report["level"] {
 export function verifyFindings(
   output: LlmOutput,
   sourceText: string,
-  opts: { truncated?: boolean } = {},
+  opts: { truncated?: boolean; hiddenText?: string } = {},
 ): Report {
   const haystack = normalizeForMatch(sourceText);
   const seen = new Set<string>();
@@ -65,6 +65,7 @@ export function verifyFindings(
     findings,
     rejected,
     injectionWarnings: detectInjection(sourceText),
+    hiddenInjectionWarnings: opts.hiddenText ? detectInjection(opts.hiddenText) : [],
     truncated: opts.truncated ?? false,
     disclaimer: DISCLAIMER,
   };

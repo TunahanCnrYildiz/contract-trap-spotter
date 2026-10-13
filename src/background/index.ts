@@ -21,7 +21,7 @@ async function run(tabId: number): Promise<AnalyseResponse> {
   const { text, truncated } = prepareSource(page.text);
   try {
     const output = await analyse(text, settings);
-    return { ok: true, report: verifyFindings(output, text, { truncated }), url: page.url, title: page.title };
+    return { ok: true, report: verifyFindings(output, text, { truncated, hiddenText: page.hiddenText }), url: page.url, title: page.title };
   } catch (e) {
     return { ok: false, error: e instanceof LlmError ? e.message : "Beklenmeyen hata" };
   }

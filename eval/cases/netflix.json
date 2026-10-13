@@ -1,7 +1,7 @@
 {
   "id": "netflix",
   "title": "Netflix Terms of Use",
-  "file": "netflix.txt",
+  "file": "netflix.html",
   "source": "https://help.netflix.com/legal/termsofuse (retrieved 2026-10-13)",
   "labelling_note": "Clauses that give advance notice (4, 5) or can be declined by the user (10) are low risk but still included in gold.",
   "gold": [

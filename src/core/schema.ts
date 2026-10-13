@@ -68,6 +68,8 @@ export type Report = {
   findings: VerifiedFinding[];
   rejected: RejectedFinding[];
   injectionWarnings: string[];
+  // Hidden page text that looks like instructions to the model. It is never sent to the model.
+  hiddenInjectionWarnings: string[];
   truncated: boolean;
   disclaimer: string;
 };

@@ -28,7 +28,10 @@ function render(report: Report) {
   const warnings = $("warnings");
   warnings.replaceChildren();
   for (const w of report.injectionWarnings) {
-    warnings.append(el("li", `Sayfada yapay zekâya yönelik talimat benzeri metin bulundu (${w}). Yok sayıldı.`));
+    warnings.append(el("li", `Sayfada yapay zekâya yönelik talimat benzeri görünür metin bulundu (${w}). Model bunu veri olarak ele alır, ama sonuçlara temkinli yaklaşın.`));
+  }
+  if (report.hiddenInjectionWarnings.length > 0) {
+    warnings.append(el("li", "Sayfada kullanıcıya görünmeyen, yapay zekâya yönelik talimat benzeri gizli metin bulundu. Analize dahil edilmedi."));
   }
   if (report.truncated) warnings.append(el("li", "Metin çok uzundu, yalnızca ilk bölümü analiz edildi."));
 

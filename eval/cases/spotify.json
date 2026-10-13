@@ -1,7 +1,7 @@
 {
   "id": "spotify",
   "title": "Spotify Terms of Use",
-  "file": "spotify.txt",
+  "file": "spotify.html",
   "source": "https://www.spotify.com/us/legal/end-user-agreement/ (retrieved 2026-10-13)",
   "labelling_note": "Same rules as Netflix and Dropbox: advance-notice changes are low risk but included; strongly worded content licences included; standard assignment, governing-law, Apple third-party and mass-arbitration procedure clauses left out.",
   "gold": [

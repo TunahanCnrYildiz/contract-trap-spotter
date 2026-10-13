@@ -1,21 +1,78 @@
 {
   "id": "reddit",
   "title": "Reddit User Agreement",
-  "file": "reddit.txt",
+  "file": "reddit.html",
   "source": "https://redditinc.com/policies/user-agreement (retrieved 2026-10-13)",
-  "labelling_note": "The saved page is long and starts with language menus, so only the first 60,000 characters are analysed and the text is cut inside section 13. Gold is limited to clauses inside that window (sections 2-13). Later sections are not counted as missed.",
+  "labelling_note": "The saved page contains the US and the EEA/UK variants of the agreement (a browser shows one at a time). Evaluation uses the US variant. Same labelling rules as the other documents; standard venue and assignment clauses are left out.",
   "gold": [
-    { "category": "data_sharing", "anchor": "you consent to the collection and use of this information as set forth in the Privacy Policy" },
-    { "category": "unilateral_change", "anchor": "We reserve the right to modify, suspend, or discontinue the Services (in whole or in part) at any time, with or without notice to you" },
-    { "category": "liability_limit", "anchor": "we will not be liable to you or to any third party for any modification, suspension, or discontinuation of the Services" },
-    { "category": "content_license", "anchor": "worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license" },
-    { "category": "content_license", "anchor": "this license includes the right to use Your Content to train AI and machine learning models" },
-    { "category": "data_sharing", "anchor": "make Your Content available for syndication, broadcast, distribution, or publication by other companies, organizations, or individuals who partner with Reddit" },
-    { "category": "content_license", "anchor": "Reddit may use such ideas, suggestions, and feedback without compensation or obligation to you" },
-    { "category": "other", "anchor": "we may, in our sole discretion, delete, deem your content ineligible for monetization, or remove Your Content, at any time and for any reason" },
-    { "category": "data_sharing", "anchor": "we may place advertisements in connection with the display of any Content or information on the Services, including Your Content" },
-    { "category": "other", "anchor": "you agree to defend, indemnify, and hold Reddit, its affiliates" },
-    { "category": "liability_limit", "anchor": "THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF ANY KIND" },
-    { "category": "liability_limit", "anchor": "IN NO EVENT WILL ANY OF THE REDDIT ENTITIES BE LIABLE TO YOU FOR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES" }
-  ]
+    {
+      "category": "data_sharing",
+      "anchor": "you consent to the collection and use of this information as set forth in the Privacy Policy"
+    },
+    {
+      "category": "unilateral_change",
+      "anchor": "We reserve the right to modify, suspend, or discontinue the Services (in whole or in part) at any time, with or without notice to you"
+    },
+    {
+      "category": "liability_limit",
+      "anchor": "we will not be liable to you or to any third party for any modification, suspension, or discontinuation of the Services"
+    },
+    {
+      "category": "content_license",
+      "anchor": "worldwide, royalty-free, perpetual, irrevocable, non-exclusive, transferable, and sublicensable license"
+    },
+    {
+      "category": "content_license",
+      "anchor": "this license includes the right to use Your Content to train AI and machine learning models"
+    },
+    {
+      "category": "data_sharing",
+      "anchor": "make Your Content available for syndication, broadcast, distribution, or publication by other companies, organizations, or individuals who partner with Reddit"
+    },
+    {
+      "category": "content_license",
+      "anchor": "Reddit may use such ideas, suggestions, and feedback without compensation or obligation to you"
+    },
+    {
+      "category": "other",
+      "anchor": "we may, in our sole discretion, delete, deem your content ineligible for monetization, or remove Your Content, at any time and for any reason"
+    },
+    {
+      "category": "data_sharing",
+      "anchor": "we may place advertisements in connection with the display of any Content or information on the Services, including Your Content"
+    },
+    {
+      "category": "other",
+      "anchor": "you agree to defend, indemnify, and hold Reddit, its affiliates"
+    },
+    {
+      "category": "liability_limit",
+      "anchor": "THE SERVICES ARE PROVIDED \"AS IS\" AND \"AS AVAILABLE\" WITHOUT REPRESENTATIONS, WARRANTIES, OR CONDITIONS OF ANY KIND"
+    },
+    {
+      "category": "liability_limit",
+      "anchor": "IN NO EVENT WILL ANY OF THE REDDIT ENTITIES BE LIABLE TO YOU FOR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES"
+    },
+    {
+      "category": "liability_limit",
+      "anchor": "IN NO EVENT WILL THE AGGREGATE LIABILITY OF THE REDDIT ENTITIES EXCEED THE GREATER OF ONE HUNDRED U.S. DOLLARS ($100)"
+    },
+    {
+      "category": "liability_limit",
+      "anchor": "YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR DEVICE OR COMPUTER SYSTEM, OR RESULTING LOSS OF DATA"
+    },
+    {
+      "category": "unilateral_change",
+      "anchor": "By continuing to access or use the Services on or after the Effective Date of the revised Terms, you agree to be bound by the revised Terms"
+    },
+    {
+      "category": "other",
+      "anchor": "we may suspend or terminate your Account, moderator status, or ability to access or use the Services at any time for any or no reason"
+    },
+    {
+      "category": "data_retention",
+      "anchor": "your Account may be deactivated due to prolonged inactivity"
+    }
+  ],
+  "stopBefore": "Reddit User Agreement if you live in the EEA, United Kingdom, or Switzerland"
 }

@@ -9,13 +9,38 @@ import { prepareSource } from "../src/core/prompt";
 import { verifyFindings } from "../src/core/verify";
 import { normalizeForMatch } from "../src/core/text";
 import { quoteSegments } from "../src/core/quote";
+import { Window as HappyWindow } from "happy-dom";
+import { extractMainText } from "../src/content/main-text";
 
 type Gold = { category: string; anchor: string; note?: string };
-type Case = { id: string; title: string; file: string; source: string; gold: Gold[] };
+type Case = { id: string; title: string; file: string; source: string; stopBefore?: string; gold: Gold[] };
+
+const args = process.argv.slice(2);
+const checkOnly = args.includes("--check"); // validate gold anchors, no LLM calls
+const only = args.filter((a) => !a.startsWith("--"));
+
+// HTML cases go through the same extractor the extension uses; .txt cases are read as is.
+function loadDocument(file: string, stopBefore?: string): string {
+  const raw = readFileSync(join("eval/docs", file), "utf8");
+  if (!file.endsWith(".html")) return raw;
+  const win = new HappyWindow({
+    settings: {
+      disableJavaScriptEvaluation: true,
+      disableJavaScriptFileLoading: true,
+      disableCSSFileLoading: true,
+      handleDisabledFileLoadingAsSuccess: true,
+    },
+  });
+  win.document.write(raw);
+  const text = extractMainText(win.document as unknown as Document, win as unknown as Window).text;
+  // Some saved pages hold several regional variants. A real browser shows one, so cut at the marker.
+  const cut = stopBefore ? text.indexOf(stopBefore) : -1;
+  return cut > 0 ? text.slice(0, cut) : text;
+}
 
 const apiKey = process.env.GEMINI_API_KEY ?? "";
 const model = process.env.GEMINI_MODEL || "gemini-3.8-flash";
-if (!apiKey) {
+if (!apiKey && !checkOnly) {
   console.error("GEMINI_API_KEY is not set. Fill in .env first.");
   process.exit(1);
 }
@@ -41,7 +66,6 @@ function overlaps(quote: string, anchor: string): boolean {
 }
 
 // Optional filter: npm run eval -- netflix reddit
-const only = process.argv.slice(2);
 const cases: Case[] = readdirSync("eval/cases")
   .filter((f) => f.endsWith(".json"))
   .sort()
@@ -63,7 +87,7 @@ const details: string[] = [];
 let totalGold = 0, totalCaught = 0, totalFalse = 0, totalVerified = 0, totalRejected = 0;
 
 for (const c of cases) {
-  const raw = readFileSync(join("eval/docs", c.file), "utf8");
+  const raw = loadDocument(c.file, c.stopBefore);
   const { text, truncated } = prepareSource(raw);
   const haystack = normalizeForMatch(text);
 
@@ -75,6 +99,10 @@ for (const c of cases) {
     }
   }
 
+  if (checkOnly) {
+    console.log(`[${c.id}] ok: ${c.gold.length} anchors found, ${text.length} chars${truncated ? " (truncated)" : ""}`);
+    continue;
+  }
   const output = await analyseWithRetry(text);
   const report = verifyFindings(output, text, { truncated });
 
@@ -103,6 +131,7 @@ for (const c of cases) {
   await sleep(1500);
 }
 
+if (checkOnly) process.exit(0);
 const recall = totalGold ? totalCaught / totalGold : 0;
 const precision = totalVerified ? (totalVerified - totalFalse) / totalVerified : 0;
 

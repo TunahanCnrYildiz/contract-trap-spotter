@@ -1,7 +1,7 @@
 {
   "id": "dropbox",
   "title": "Dropbox Terms of Service",
-  "file": "dropbox.txt",
+  "file": "dropbox.html",
   "source": "https://www.dropbox.com/terms (retrieved 2026-10-13)",
   "labelling_note": "Same rule as Netflix: clauses with advance notice (fee changes, term updates) are low risk but included in gold. Standard assignment, governing-law and opt-out clauses are left out.",
   "gold": [
