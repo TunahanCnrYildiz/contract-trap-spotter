@@ -9,6 +9,7 @@
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
     "eval": "tsx --env-file=.env eval/run.ts",
+    "injection": "tsx --env-file=.env eval/injection.ts",
     "cy:run": "cypress run --browser chrome"
   },
   "dependencies": {
