@@ -1,13 +1,16 @@
 import { LlmOutputSchema, RESPONSE_JSON_SCHEMA, type LlmOutput } from "./schema";
 import { SYSTEM_PROMPT, buildUserPrompt } from "./prompt";
 
+// Set only by the e2e build (see vite.config.ts). Normal builds always use Google.
+const BASE = import.meta.env?.VITE_LLM_BASE ?? "https://generativelanguage.googleapis.com";
+
 export type LlmConfig = { apiKey: string; model: string };
 
 export class LlmError extends Error {}
 
 // Thin client: swap this file to change provider. Everything else only sees LlmOutput.
 export async function analyse(sourceText: string, cfg: LlmConfig, fetchImpl: typeof fetch = fetch): Promise<LlmOutput> {
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent`;
+  const url = `${BASE}/v1beta/models/${encodeURIComponent(cfg.model)}:generateContent`;
   const res = await fetchImpl(url, {
     method: "POST",
     signal: AbortSignal.timeout(90_000),

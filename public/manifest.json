@@ -1,11 +1,42 @@
 {
   "manifest_version": 3,
   "name": "Contract Trap Spotter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Kullanım koşullarındaki riskli maddeleri bulur. Hukuki tavsiye değildir.",
-  "permissions": ["activeTab", "scripting", "storage"],
-  "host_permissions": ["https://generativelanguage.googleapis.com/*"],
-  "background": { "service_worker": "background.js", "type": "module" },
-  "action": { "default_popup": "popup.html", "default_title": "Contract Trap Spotter" },
-  "options_page": "options.html"
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Contract Trap Spotter"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*terms*",
+        "*://*/*privacy*",
+        "*://*/*policy*",
+        "*://*/*policies*",
+        "*://*/*legal*",
+        "*://*/*agreement*",
+        "*://*/*conditions*",
+        "*://*/*eula*",
+        "*://*/*tos*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
 }

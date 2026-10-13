@@ -11,5 +11,5 @@
     "noEmit": true,
     "isolatedModules": true
   },
-  "include": ["src", "tests", "eval"]
+  "include": ["src", "tests", "eval", "cypress", "cypress.config.ts", "vite.config.ts", "vite.content.config.ts", "vite.shared.ts"]
 }

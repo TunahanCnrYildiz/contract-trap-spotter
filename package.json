@@ -6,19 +6,22 @@
   "description": "Chrome extension that flags risky clauses in terms of service and privacy policies",
   "scripts": {
     "dev": "vite build --watch",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && vite build -c vite.content.config.ts",
+    "build:e2e": "vite build --mode e2e && vite build -c vite.content.config.ts --mode e2e",
     "test": "vitest run",
     "eval": "tsx --env-file=.env eval/run.ts",
     "injection": "tsx --env-file=.env eval/injection.ts",
-    "cy:run": "cypress run --browser chrome"
+    "cy:run": "npm run build:e2e && cypress run --headed --browser .browsers/chrome/win64-155.0.8059.39/chrome-win64/chrome.exe"
   },
   "dependencies": {
     "@page-agent/page-controller": "^1.12.4",
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@puppeteer/browsers": "^3.2.4",
     "@types/chrome": "^0.3.5",
     "@types/node": "^26.6.5",
+    "cypress": "^16.1.1",
     "happy-dom": "^21.0.1",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",
