@@ -3,5 +3,24 @@
   "title": "LinkedIn User Agreement",
   "file": "linkedin.txt",
   "source": "https://www.linkedin.com/legal/user-agreement (retrieved 2026-10-13)",
-  "gold": []
+  "labelling_note": "Same rules as the other documents. This agreement has no mandatory arbitration or class action waiver, so any finding in that category would be a false alarm.",
+  "gold": [
+    { "category": "tracking", "anchor": "including the offsite collection of data for those Services, such as via our ads" },
+    { "category": "unilateral_change", "anchor": "we may not always provide prior notice of changes to these terms" },
+    { "category": "unilateral_change", "anchor": "Your continued use of our Services after we publish or send a notice about our changes to these terms means that you are consenting to the updated terms" },
+    { "category": "auto_renewal", "anchor": "We may store and continue billing your payment method (e.g., credit card), even after it has expired" },
+    { "category": "other", "anchor": "If your primary payment method fails, we may automatically charge a secondary payment method" },
+    { "category": "auto_renewal", "anchor": "your payment method automatically will be charged at the start of each subscription period" },
+    { "category": "unilateral_change", "anchor": "We may modify our prices effective prospectively upon reasonable notice" },
+    { "category": "other", "anchor": "we are not obligated to publish any content or other information on our Services and can remove it with or without notice" },
+    { "category": "content_license", "anchor": "A worldwide, transferable and sublicensable right to use, copy, modify, distribute, publicly perform and display, host, and process your content and other information without any further consent, notice and/or compensation to you or others" },
+    { "category": "content_license", "anchor": "we had already sublicensed others prior to your content removal or closing of your account" },
+    { "category": "data_sharing", "anchor": "ads may be served near your content and other information, and your social actions may be visible and included with ads" },
+    { "category": "content_license", "anchor": "LinkedIn can use and share (but does not have to) such feedback for any purpose without compensation to you" },
+    { "category": "unilateral_change", "anchor": "We may change, suspend or discontinue any of our Services." },
+    { "category": "data_retention", "anchor": "We don't promise to store or show (or keep showing) any information (including content) that you've shared" },
+    { "category": "liability_limit", "anchor": "ON AN \"AS IS\" AND \"AS AVAILABLE\" BASIS" },
+    { "category": "liability_limit", "anchor": "WILL NOT BE LIABLE IN CONNECTION WITH THIS CONTRACT FOR LOST PROFITS OR LOST BUSINESS OPPORTUNITIES" },
+    { "category": "liability_limit", "anchor": "ANY AMOUNT THAT EXCEEDS (A) THE TOTAL FEES PAID OR PAYABLE BY YOU TO LINKEDIN FOR THE SERVICES DURING THE TERM OF THIS CONTRACT, IF ANY, OR (B) US $1000" }
+  ]
 }
