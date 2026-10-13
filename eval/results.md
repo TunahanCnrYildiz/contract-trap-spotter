@@ -4,11 +4,11 @@ Model: `gemini-3.1-flash-lite` · cases: 5 · run: 2026-10-13
 
 | Document | Gold | Caught | Missed | False alarms | Rejected by verifier | Score |
 |---|---|---|---|---|---|---|
-| Dropbox Terms of Service | 13 | 9 | 4 | 0 | 0 | 100 |
-| LinkedIn User Agreement | 17 | 8 | 9 | 1 | 1 | 100 |
-| Netflix Terms of Use | 10 | 7 | 3 | 0 | 0 | 100 |
-| Reddit User Agreement | 12 | 7 | 5 | 3 | 0 | 100 |
-| Spotify Terms of Use | 20 | 10 | 10 | 1 | 0 | 100 |
+| Dropbox Terms of Service | 13 | 9 | 4 | 0 | 0 | 79 |
+| LinkedIn User Agreement | 17 | 8 | 9 | 1 | 1 | 67 |
+| Netflix Terms of Use | 10 | 7 | 3 | 0 | 0 | 65 |
+| Reddit User Agreement | 12 | 7 | 5 | 3 | 0 | 83 |
+| Spotify Terms of Use | 20 | 10 | 10 | 1 | 0 | 85 |
 | **Total** | 72 | 41 | 31 | 5 | 1 | |
 
 Recall: 57% · Precision: 89%

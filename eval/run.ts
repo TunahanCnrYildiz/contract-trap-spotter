@@ -58,6 +58,7 @@ if (cases.length === 0) {
 }
 
 const rows: string[] = [];
+const saved: unknown[] = [];
 const details: string[] = [];
 let totalGold = 0, totalCaught = 0, totalFalse = 0, totalVerified = 0, totalRejected = 0;
 
@@ -87,6 +88,7 @@ for (const c of cases) {
   totalVerified += report.findings.length;
   totalRejected += report.rejected.length;
 
+  saved.push({ id: c.id, truncated, findings: report.findings, rejected: report.rejected });
   rows.push(
     `| ${c.title} | ${c.gold.length} | ${caught.length} | ${missed.length} | ${falseAlarms.length} | ${report.rejected.length} | ${report.score} |`,
   );
@@ -122,4 +124,6 @@ const md = [
 ].join("\n");
 
 writeFileSync("eval/results.md", md);
+// Raw verified findings, so scoring changes can be checked offline without new LLM calls.
+writeFileSync("eval/last-run.json", JSON.stringify({ model, date: new Date().toISOString(), cases: saved }, null, 1));
 console.log(`\nrecall ${(recall * 100).toFixed(0)}%  precision ${(precision * 100).toFixed(0)}%  -> eval/results.md`);

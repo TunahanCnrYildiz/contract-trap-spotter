@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { verifyFindings, computeScore } from "../src/core/verify";
+import { verifyFindings, computeScore, levelFor } from "../src/core/verify";
 import { LlmOutputSchema } from "../src/core/schema";
 import { detectInjection } from "../src/core/injection";
 
@@ -55,10 +55,45 @@ describe("verifyFindings", () => {
 });
 
 describe("score", () => {
-  it("is computed from verified findings and capped at 100", () => {
-    const many = Array.from({ length: 10 }, () => ({ severity: "high" as const, confidence: 1 }));
-    expect(computeScore(many)).toBe(100);
+  const f = (severity: "low" | "medium" | "high", confidence = 1) => ({ severity, confidence });
+
+  it("is 0 without findings and stays within 0-100", () => {
     expect(computeScore([])).toBe(0);
+    expect(computeScore(Array.from({ length: 100 }, () => f("high")))).toBeLessThanOrEqual(100);
+  });
+
+  it("does not saturate on a long list of ordinary findings", () => {
+    const twenty = computeScore(Array.from({ length: 20 }, () => f("medium")));
+    expect(twenty).toBeLessThan(100);
+    expect(twenty).toBeGreaterThan(computeScore(Array.from({ length: 10 }, () => f("medium"))));
+  });
+
+  it("grows with every extra finding but by less each time", () => {
+    const one = computeScore([f("medium")]);
+    const two = computeScore([f("medium"), f("medium")]);
+    const three = computeScore([f("medium"), f("medium"), f("medium")]);
+    expect(two).toBeGreaterThan(one);
+    expect(three).toBeGreaterThan(two);
+    expect(three - two).toBeLessThanOrEqual(two - one);
+  });
+
+  it("does not depend on the order of findings", () => {
+    expect(computeScore([f("low"), f("high"), f("medium", 0.4)])).toBe(
+      computeScore([f("medium", 0.4), f("low"), f("high")]),
+    );
+  });
+
+  it("ranks severity and confidence sensibly", () => {
+    expect(computeScore([f("high")])).toBeGreaterThan(computeScore([f("medium")]));
+    expect(computeScore([f("medium")])).toBeGreaterThan(computeScore([f("low")]));
+    expect(computeScore([f("high", 1)])).toBeGreaterThan(computeScore([f("high", 0.2)]));
+  });
+
+  it("separates a mild document from a harsh one", () => {
+    const mild = computeScore([f("low"), f("low", 0.6)]);
+    const harsh = computeScore([f("high"), f("high"), f("medium"), f("medium"), f("medium"), f("low")]);
+    expect(levelFor(mild)).toBe("low");
+    expect(levelFor(harsh)).toBe("high");
   });
 });
 
