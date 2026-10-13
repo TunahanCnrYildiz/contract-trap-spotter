@@ -3,5 +3,17 @@
   "title": "Netflix Terms of Use",
   "file": "netflix.txt",
   "source": "https://help.netflix.com/legal/termsofuse (retrieved 2026-10-13)",
-  "gold": []
+  "labelling_note": "Clauses that give advance notice (4, 5) or can be declined by the user (10) are low risk but still included in gold.",
+  "gold": [
+    { "category": "auto_renewal", "anchor": "Unless you cancel your subscription before your billing date, you authorize us to charge the subscription fee for the next billing cycle" },
+    { "category": "other", "anchor": "You authorize us to charge any Payment Method associated with your account in case your primary Payment Method is declined" },
+    { "category": "cancellation_difficulty", "anchor": "payments are non-refundable and we do not provide refunds or credits for any partial subscription periods or unused Netflix content" },
+    { "category": "unilateral_change", "anchor": "We may change our subscription plans and the price of our service from time to time." },
+    { "category": "unilateral_change", "anchor": "We may, from time to time, change these Terms of Use." },
+    { "category": "liability_limit", "anchor": "You waive all special, indirect and consequential damages against us." },
+    { "category": "liability_limit", "anchor": "is provided \"as is\" and without warranty or condition" },
+    { "category": "arbitration_waiver", "anchor": "EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND NOT AS A PLAINTIFF OR CLASS MEMBER" },
+    { "category": "content_license", "anchor": "worldwide and in perpetuity without further compensation" },
+    { "category": "other", "anchor": "using a remote access support tool through which we have full access to your computer" }
+  ]
 }

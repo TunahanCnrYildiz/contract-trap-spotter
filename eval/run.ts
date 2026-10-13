@@ -39,10 +39,17 @@ function overlaps(quote: string, anchor: string): boolean {
   return q.includes(a) || a.includes(q);
 }
 
+// Optional filter: npm run eval -- netflix reddit
+const only = process.argv.slice(2);
 const cases: Case[] = readdirSync("eval/cases")
   .filter((f) => f.endsWith(".json"))
   .sort()
-  .map((f) => JSON.parse(readFileSync(join("eval/cases", f), "utf8")));
+  .map((f) => JSON.parse(readFileSync(join("eval/cases", f), "utf8")) as Case)
+  .filter((c) => (only.length ? only.includes(c.id) : true))
+  .filter((c) => {
+    if (c.gold.length === 0) console.log(`[${c.id}] skipped: no gold labels yet`);
+    return c.gold.length > 0;
+  });
 
 if (cases.length === 0) {
   console.error("No cases in eval/cases. See eval/README.md.");
